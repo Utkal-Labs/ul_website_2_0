@@ -15,7 +15,17 @@
     // Initiate the wowjs
     new WOW().init();
 
-
+  // Preloader
+  $(window).on("load", function () {
+    if ($("#preloader").length) {
+      $("#preloader")
+        .delay(400)
+        .fadeOut("slow", function () {
+          $(this).remove();
+        });
+    }
+  });
+  // Preloader End
     
     // Facts counter
     $('[data-toggle="counter-up"]').counterUp({
