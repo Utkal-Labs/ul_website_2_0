@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #FEA116;
+    --primary: #2d7686;
     --light: #F1F8FF;
     --dark: #0F172B;
 }
@@ -28,7 +28,7 @@
 
 /*** Button ***/
 .btn {
-    font-family: 'Nunito', sans-serif;
+    /* font-family: 'Nunito', sans-serif; */
     font-weight: 500;
     text-transform: uppercase;
     transition: .5s;
@@ -65,7 +65,7 @@
     border-radius: 2px;
 }
 
-.food-delivery-highlight{
+.rehabilitation-highlight{
     background-color: var(--primary);
     margin-top: -12px;
     height: 4px;
@@ -73,14 +73,14 @@
 
 
 /*** Hero Header ***/
-.hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(22, 32, 57, 0.9)), url(../img/bg-hero.jpg);
+  .hero-header {
+    background: linear-gradient(rgb(241 246 254 / 94%), rgb(240 248 251 / 87%)), url(../img/bgp.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.hero-header .img-fluid {
+/* .hero-header .img-fluid {
     animation: imgRotate 50s linear infinite;
 }
 
@@ -88,7 +88,7 @@
     100% { 
         transform: rotate(360deg); 
     } 
-}
+} */
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
@@ -99,10 +99,9 @@
 }
 
 
-
 /*** Technology ***/
 
- .technology-bg {
+.technology-bg {
   background-color: #fef5e8;
   /* height: 50px; */
 }
@@ -127,7 +126,7 @@
 
 .service-item:hover * {
     color: var(--light) !important;
-}
+} 
 
 
  /* about section */
@@ -253,7 +252,7 @@ a, a:hover, a:focus {
   }
 
 .p{
-    font-family: 'Nunito', sans-serif;
+  font-family: 'Pacifico', sans-serif;
 }
 
   /* button */
@@ -323,5 +322,14 @@ a, a:hover, a:focus {
 }
 
 .service .nav .nav-link.active h4 {
+  color: #FFFFFF !important;
+}
+
+
+.service .nav .nav-link i{
+
+  color: var(--primary);
+}
+.service .nav .nav-link.active i {
   color: #FFFFFF !important;
 }
