@@ -32,7 +32,7 @@
   /* / Fading animation / */
   .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 0.5s;
   }
   
   @keyframes fade {
@@ -49,8 +49,9 @@
   }
   
   .modal {
-    left: auto;
+    /* left: auto; */
     background: #000000d1;
+    z-index: 200000;
   }
   .close-css {
     background-color: transparent;
