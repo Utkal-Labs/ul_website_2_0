@@ -18,7 +18,7 @@ $(document).ready(function () {
               "</div>"
           );
           $("#contactForm")[0].reset();
-          $('#chooseFile').val('');
+          $("#chooseFile").val("");
         } else {
           $("#responseMsg").html(
             '<div class="alert alert-danger" role="alert">' +
@@ -27,10 +27,10 @@ $(document).ready(function () {
           );
         }
       },
-      complete: function() {
+      complete: function () {
         // Hide loader
         $(".loader-container").hide();
-      }
+      },
     });
     e.preventDefault();
   });
@@ -100,7 +100,7 @@ if ($(".nav-menu").length) {
   });
   $("body").append($mobile_nav);
   $("body").prepend(
-    '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="las la-bars"></i></button>'
+    '<button type="button" class="mobile-nav-toggle d-lg-none"><i class="fas fa-bars"></i></button>'
   );
   $("body").append('<div class="mobile-nav-overly"></div>');
 
