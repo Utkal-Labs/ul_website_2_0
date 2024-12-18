@@ -443,8 +443,6 @@ h6,
   height: auto;
 }
 
-.marketplace-color-highlight{
+.marketplace-highlight {
   background-color: var(--primary);
-  margin-top: -12px;
-  height: 4px;
 }
