@@ -49,87 +49,45 @@
   <div class=" bg-white p-0">
     <div id="preloader"></div>
 
-    <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area">
-      <div class="hero-slides owl-carousel">
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background mb-5 pb-5 ">
+  <img src="img/hero-bg-2.jpg" alt="" class="hero-bg">
 
-        <!-- Single Hero Slide -->
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <!-- Slide Img -->
-          <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-1.jpg);"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-9">
-                <!-- Slide Content -->
-                <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                  <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
-                  <h2 data-animation="fadeInUp" data-delay="500ms">Effortless Stay Booking</h2>
-                  <p data-animation="fadeInUp" data-delay="700ms">Revolutionize your hospitality business with an
-                    intuitive platform that delivers seamless booking experiences. From dynamic pricing to personalized
-                    recommendations, we help you connect with your guests effortlessly.</p>
-                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal"
-                  data-wow-delay=".6s" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Hero Slide -->
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <!-- Slide Img -->
-          <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-2.jpg);"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-9">
-                <!-- Slide Content -->
-                <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                  <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
-                  <h2 data-animation="fadeInUp" data-delay="500ms">Smart Hospitality Tools</h2>
-                  <p data-animation="fadeInUp" data-delay="700ms">Empower your business with cutting-edge stay booking
-                    tools. With features like multi-language support, virtual property tours, and instant chat
-                    assistance, your platform will stand out in a competitive market.</p>
-                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal"
-                  data-wow-delay=".6s" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Hero Slide -->
-        <div class="single-hero-slide d-flex align-items-center justify-content-center">
-          <!-- Slide Img -->
-          <div class="slide-img bg-img" style="background-image: url(img/bg-img/bg-3.jpg);"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-12 col-lg-9">
-                <!-- Slide Content -->
-                <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                  <div class="line" data-animation="fadeInUp" data-delay="300ms"></div>
-                  <h2 data-animation="fadeInUp" data-delay="500ms">Guest Satisfaction</h2>
-                  <p data-animation="fadeInUp" data-delay="700ms">Delight your customers with a user-friendly booking
-                    platform designed to streamline operations. Enhance guest satisfaction with smart features tailored
-                    to meet their preferences and needs.</p>
-                  <a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal"
-                  data-wow-delay=".6s" class="btn palatin-btn mt-50" data-animation="fadeInUp" data-delay="900ms">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+  <div class="container">
+    <div class="row gy-4 justify-content-between">
+      <div class="col-lg-4 order-lg-last hero-img" data-aos="zoom-out" data-aos-delay="100">
+        <img src="img/hero-img.png" class="img-fluid animated" alt="">
       </div>
-    </section>
-    <!-- ##### Hero Area End ##### -->
 
-    <!-- ##### Book Now Area Start ##### -->
-    <div class="book-now-area">
-      <div class="container book-now-form justify-content-center d-flex">
-        <img src="img/hero-screenshots.png" class="w-75">
+      <div class="col-lg-6  d-flex flex-column justify-content-center" data-aos="fade-in">
+        <h1>Discover Your <br> <span>Perfect Stay</span> Anywhere</h1>
+        <p>Find and book top stays effortlessly with tailored recommendations and unforgettable experiences!</p>
+        <div class="d-flex">
+          <a class="button py-3 px-5 page-scroll" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#myModal"
+          data-wow-delay=".6s">Get Started</a>
+        </div>
       </div>
+
     </div>
-    <!-- ##### Book Now Area End ##### -->
+  </div>
+
+  <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+    <defs>
+      <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+    </defs>
+    <g class="wave1">
+      <use xlink:href="#wave-path" x="50" y="3"></use>
+    </g>
+    <g class="wave2">
+      <use xlink:href="#wave-path" x="50" y="0"></use>
+    </g>
+    <g class="wave3">
+      <use xlink:href="#wave-path" x="50" y="9"></use>
+    </g>
+  </svg>
+
+</section><!-- /Hero Section -->
+
 
     <section class="ftco-section pb-5 mb-5 mt-50">
       <div class="container">
@@ -598,6 +556,7 @@
   <script src="js/plugins/plugins.js"></script>
   <!-- Active js -->
   <script src="js/active.js"></script>
+  <script src="js/aos.js"></script>
 
 
 
