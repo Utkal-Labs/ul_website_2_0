@@ -1,8 +1,8 @@
 /*--------------------------------------------------------------
-  ///////////// vediostreamingstart  ///////////////
+  ///////////// videostreamingstart  ///////////////
 --------------------------------------------------------------*/
 
-.vediostreming-highlight {
+.videostreaming-highlight {
   background: #FF6500;
   margin-top: -12px;
   height: 4px;
@@ -14,7 +14,7 @@
   position: relative;
   z-index: 1;
   padding: 120px 0 50px;
-  background-image: url("../img/hero/herobg-vediostreming-Industry\ page-UL.gif");
+  background-image: url("../img/hero/herobg-videostreaming-Industry\ page-UL.gif");
   background-position: top center;
   background-repeat: no-repeat;
 }
