@@ -1,71 +1,66 @@
 class SpecialTopHeader extends HTMLElement {
-  connectedCallback() {
-    const script = document.createElement("script");
-    script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
-    document.body.appendChild(script);
-    this.innerHTML = `
-          <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    connectedCallback() {
+      // Add the Tawk.to live chat script
+      const tawkScript = document.createElement("script");
+    //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
+    //   document.body.appendChild(script);
+      tawkScript.async = true;
+      tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
+      tawkScript.charset = 'UTF-8';
+      tawkScript.setAttribute('crossorigin', '*');
+      document.head.appendChild(tawkScript);
+  
+      // Add the top header HTML content
+      this.innerHTML = `
+        <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
           <div class="container2 d-flex align-items-center justify-content-between">
-              <div class="upper-section">
+            <div class="upper-section">
   
-                  <div class="letside-topnavbar">
+              <div class="letside-topnavbar">
   
-                      <!-- <div class="topnavbar-email">
-                          <i class="fa fa-envelope"></i>
-                          <a href="mailto:sales@utkallabs.com">
-                              <span>sales@utkallabs.com</span></a>
-                      </div> -->
+                <div class="topnavbar-call2">
+                  <a href="mailto:sales@utkallabs.com">
+                    <img src="assets/images/gmail.png" alt="Email" width="18" height="18">
+                    <span>sales@utkallabs.com</span>
+                  </a>
+                </div>
   
-                      <!-- <div class="topnavbar-call">
-                          <i class="fa fa-phone"></i>
-                          <a href="tel:+91 93383 08255">
-                              <span>+91 93383 08255</span></a>
+                <div class="topnavbar-call2">
+                  <a href="tel:+91 93383 08255">
+                    <img src="assets/images/india.png" alt="INDIA Flag" width="18" height="18">
+                    <span>+91 93383 08255</span>
+                  </a>
+                </div>
   
-                      </div> -->
+                <div class="topnavbar-call2">
+                  <a href="tel:+1 32390 05072">
+                    <img src="assets/images/usa.png" alt="USA Flag" width="18" height="18">
+                    <span>+1 32390 05072</span>
+                  </a>
+                </div>
   
-                      <div class="topnavbar-call2">
-                          <a href="mailto:sales@utkallabs.com">
-                              <img src="assets/images/gmail.png" alt="Email" width="18" height="18">
-  
-                              <span>sales@utkallabs.com</span></a>
-                      </div>
-  
-                      <div class="topnavbar-call2">
-                          <a href="tel:+91 93383 08255">
-                              <img src="assets/images/india.png" alt="INDIA Flag" width="18" height="18">
-                              <span>+91 93383 08255</span></a>
-                      </div>
-  
-                      <div class="topnavbar-call2">
-                          <a href="tel:+1 32390 05072">
-                              <img src="assets/images/usa.png" alt="USA Flag" width="18" height="18">
-                              <span>+1 32390 05072</span></a>
-                      </div>
-  
-  
-                  </div>
-  
-                  <div class="right-side">
-                      <div class="search-bar">
-                          <form class="header-search-form">
-                              <input type="search" name="keyword" placeholder="Search" autocomplete="off">
-                              <button class="header-search-btn"><i class="las la-search"></i></button>
-                          </form>
-                      </div>
-  
-                      <div class="schedule-meeting">
-                          <img src="assets/images/icon/calendar.png">
-                          <!-- <i class="fa-regular fa-calendar"></i> -->
-                          <h1><a href="https://calendly.com/udaya-das" target=”_blank”>Schedule a meeting</a></h1>
-                      </div>
-  
-                  </div>
               </div>
+  
+              <div class="right-side">
+                <div class="search-bar">
+                  <form class="header-search-form">
+                    <input type="search" name="keyword" placeholder="Search" autocomplete="off">
+                    <button class="header-search-btn"><i class="las la-search"></i></button>
+                  </form>
+                </div>
+  
+                <div class="schedule-meeting">
+                  <img src="assets/images/icon/calendar.png" alt="Calendar">
+                  <h1><a href="https://calendly.com/udaya-das" target="_blank">Schedule a meeting</a></h1>
+                </div>
+  
+              </div>
+            </div>
           </div>
-      </div>
-          `;
+        </div>
+      `;
+    }
   }
-}
 
 class SpecialHeader extends HTMLElement {
   connectedCallback() {
