@@ -114,7 +114,7 @@ class SpecialHeader extends HTMLElement {
                                <li><a href="/industry/Food-delivery/food-delivery.html">Food Delivery</a></li>
                             <li><a href="/industry/education/education.html">Education</a></li>
                             <li><a href="/industry/fitness/fitness.html">Fitness</a></li>
-                                 <li><a href="/industry/vediostreaming/index.html">Vedio Streaming</a></li>
+                                 <li><a href="/industry/videostreaming/index.html">Video Streaming</a></li>
                                 <li><a href="/industry/healthcare/healthcare.html">Health Care</a></li>
                             <li><a href="/industry/saas/index.html">SaaS</a></li>
                                 <li><a href="/industry/rehabilitation/index.html">Rehabilitation</a></li>
