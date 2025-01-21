@@ -52,6 +52,7 @@ class SpecialHeader extends HTMLElement {
                             <li><a href="/industry/saas/index.html">SaaS</a></li>
                             <li><a href="/industry/rehabilitation/index.html">Rehabilitation</a></li>
                              <li><a href="/industry/transportation/index.html">Transportation</a></li>
+                             <li><a href="/industry/stay-booking/index.html">Stay Booking</a></li>
                           </ul>
                       </li>
   
