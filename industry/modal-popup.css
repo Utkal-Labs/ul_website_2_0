@@ -51,7 +51,7 @@
   .modal {
     /* left: auto; */
     background: #000000d1;
-    z-index: 200000;
+    z-index: 200000 !important;
   }
   .close-css {
     background-color: transparent;
