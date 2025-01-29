@@ -1,5 +1,16 @@
 class SpecialHeader extends HTMLElement {
   connectedCallback() {
+          // Add the Tawk.to live chat script
+          const tawkScript = document.createElement("script");
+          //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
+          //   document.body.appendChild(script);
+            tawkScript.async = true;
+            tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
+            tawkScript.charset = 'UTF-8';
+            tawkScript.setAttribute('crossorigin', '*');
+            document.head.appendChild(tawkScript);
+        
+            // Add the top header HTML content
     this.innerHTML = `
            <header id="header" class="fixed-top d-flex flex-column">
            <div class="ecommerce-color-highlight marketplace-color-highlight food-delivery-highlight  education-highlight food-delivery-highlight rehabilitation-highlight saas-highlight vediostreming-highlight"></div>
