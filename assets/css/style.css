@@ -1655,7 +1655,7 @@ input::placeholder {
 
 
 
-/* .about-section .mangement-section {
+.about-section .mangement-section {
   background-color: #f6f9ff;
   position: relative;
   overflow: hidden;
@@ -1718,7 +1718,7 @@ input::placeholder {
 .about-section .mangement-social li :hover {
   color: #ffffff;
   background-color: #008283;
-} */
+}
 
 /* [Meet our Mangement end/] Aboutuspage*/
 /*--------------------------------------------------------------
