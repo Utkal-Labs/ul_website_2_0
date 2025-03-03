@@ -1012,16 +1012,16 @@ textarea::placeholder {
   7.[Have A Project In Mind? Let's Connect /// about block ]
 -------------------------------------------------------------------*/
 
-.history-icon{
+.about-section .history-icon{
   color: #009798;
 font-size: 25px;
 }
 
-.journey .video-section {
+.about-section .journey .video-section {
   position: relative;
 }
 
-.journey .background-video {
+.about-section .journey .background-video {
   position: absolute;
   top: 0;
   left: 0;
@@ -1031,19 +1031,19 @@ font-size: 25px;
   z-index: -2;
 }
 
-.journey .overlay {
+.about-section .journey .overlay {
   position: relative;
   background: rgba(0, 0, 0, 0.7); /* Semi-transparent gray */
   z-index: 1;
 }
 
-.journey p{
+.about-section .journey p{
   font-weight: 270;
 }
 
 
 
-.card {
+.about-section .card {
   position: relative;
   width: 300px;
   height: 200px;
@@ -1065,7 +1065,7 @@ font-size: 25px;
   z-index: -1; 
 } */
 
-.content {
+.about-section .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -1079,7 +1079,7 @@ font-size: 25px;
   transition: all 0.3s ease;
 }
 
-.content h2 {
+.about-section .content h2 {
   margin: 0;
   font-size: 30px;
   font-weight: bold;
@@ -1088,7 +1088,7 @@ font-size: 25px;
   margin-top: 18%;
 }
 
-.content p {
+.about-section .content p {
   margin: 0;
   margin-top: 10px;
   font-size: 16px;
@@ -1097,16 +1097,16 @@ font-size: 25px;
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.card:hover .content h2 {
+.about-section .card:hover .content h2 {
 margin-top: 0;
 }
 
-.card:hover .content p {
+.about-section .card:hover .content p {
   opacity: 1;
   transform: translateY(0);
 }
 
-.card {
+.about-section .card {
 	position: relative;
 	width: 400px;
 	background: radial-gradient(#111 50%, #000 100%);
@@ -1114,22 +1114,22 @@ margin-top: 0;
 	cursor: pointer;
 }
 
-img {
+.about-section img {
 	max-width: 100%;
 	display: block;
 }
 
-.card img {
+.about-section .card img {
 	transform: scale(1.3);
 	transition: 0.3s ease-out;
 }
 
-.card:hover img {
+.about-section .card:hover img {
 	transform: scale(1.1) translateY(-20px);
 	opacity: 0.3;
 }
 
-.overlay {
+.about-section .overlay {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -1141,45 +1141,45 @@ img {
 	color: #fff;
 }
 
-.text-h1 {
+.about-section .text-h1 {
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all .3s ease-out;
 }
 
-.text-p {
+.about-section .text-p {
 	transform: translateY(30px);
 	opacity: 0;
 	transition: all .3s ease-out 0.2s;
 }
 
-.card:hover .overlay .text-h1 {
+.about-section .card:hover .overlay .text-h1 {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-.card:hover .overlay .text-p {
+.about-section .card:hover .overlay .text-p {
 	opacity: 1;
 	transform: translateY(0);
 }
 
-.core-values{
+.about-section .core-values{
   background-color: #000000;
 }
 
 
-.previous{
+.about-section .previous{
   z-index: 100;
   /* background: rgba(0, 0, 0, 0.4) ; */
 }
 
-.previous{
+.about-section .previous{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.card:hover{ .previous{
+.about-section .card:hover{ .previous{
   display: none;
 }}
 
@@ -1503,11 +1503,11 @@ input::placeholder {
 --------------------------------------------------------------*/
 
 /* [history] */
-.history-section {
+/* .about-section .history-section {
   position: relative;
 }
 
-.history-section.two {
+.about-section .history-section.two {
   background-color: #f5f8ff;
   display: flex;
   justify-content: space-between;
@@ -1518,89 +1518,87 @@ input::placeholder {
   flex-wrap: wrap;
   padding: 40px 30px;
 }
-.history-thumb img {
+.about-section .history-thumb img {
   width: 90%;
   -o-object-fit: cover;
   object-fit: cover;
 }
 
-.history-content {
+.about-section .history-content {
   margin-left: 30px;
 }
 
 @media only screen and (max-width: 991px) {
-  .history-content {
+  .about-section .history-content {
     margin-left: 0;
   }
 }
 
-.history-content .title {
+.about-section .history-content .title {
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: -5px;
   text-transform: capitalize;
 }
-.history-content .para {
+.about-section .history-content .para {
   color: #2a2727;
   font-family: "jost";
 }
 
 @media only screen and (max-width: 575px) {
-  .history-content .para {
+  .about-section .history-content .para {
     margin-bottom: 5px;
   }
-}
+} */
 
 /* [core values //]*/
 
-.corevalue-content {
+/* .about-section .corevalue-content {
   margin-left: 0;
 }
-.corevalue-content .title {
+.about-section .corevalue-content .title {
   font-weight: 700;
   margin-bottom: 20px;
   margin-top: -5px;
   text-transform: capitalize;
 }
-.corevalue-content .para {
+.about-section .corevalue-content .para {
   color: #2a2727;
   font-family: "jost";
 }
 
 @media only screen and (max-width: 575px) {
-  .corevalue-content .para {
+  .about-section .corevalue-content .para {
     margin-bottom: 5px;
   }
-}
+} */
 
 /* [core values//] */
 
 /* [features@@] */
 
-.features-section {
+/* .about-section .features-section {
   position: relative;
 }
 
-.features {
+.about-section .features {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
 
-.features h5 {
+.about-section .features h5 {
   margin-bottom: 20px;
 }
 
-.first-line {
+.about-section .first-line {
   display: flex;
   justify-content: space-between;
   gap: 10px;
 }
 
-.box {
-  /* width: 330px;
-  height: 180px; */
+.about-section .box {
   background: #ffffff;
   border: 1px solid #ecf2ff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
@@ -1610,47 +1608,39 @@ input::placeholder {
   padding: 10px 20px;
 }
 
-.box h5 img {
+.about-section .box h5 img {
   width: 50px;
   margin-right: 20px;
 }
 
-.box h5 {
-  /* color: #003939;
-  font-family: 'Jost';
-  font-style: normal; 
-  font-weight: 500;*/
+.about-section .box h5 {
   font-size: 18px;
   line-height: 25px;
 }
 
-.quality {
+.about-section .quality {
   margin-top: -15px;
 }
 
-.box p {
-  /* width: 90%; */
+.about-section .box p {
   align-content: start;
-  /* font-family: 'Jost';
-  font-style: normal;
-  font-weight: 400; */
   font-size: 15px;
   align-items: start;
 }
 @media screen and (max-width: 668px) {
-  .features {
+  .about-section .features {
     padding: 0;
   }
-  .box {
+  .about-section .box {
     margin-top: 20px;
   }
-  .first-line {
+  .about-section .first-line {
     display: block;
   }
-  .features h5 {
+  .about-section .features h5 {
     margin-bottom: 10px;
   }
-}
+} */
 
 /* [featrures//] */
 
@@ -1665,56 +1655,56 @@ input::placeholder {
 
 
 
-.mangement-section {
+.about-section .mangement-section {
   background-color: #f6f9ff;
   position: relative;
   overflow: hidden;
 }
-.management-details {
+.about-section .management-details {
   display: flex;
   margin-top: 1rem;
 }
 
 @media only screen and (max-width: 767px) {
-  .management-details {
+  .about-section .management-details {
     display: block;
   }
 
-  .mangement-content {
+  .about-section .mangement-content {
     padding: 1rem;
   }
 }
 
-.mangement-img {
+.about-section .mangement-img {
   width: 100%;
 }
 
-.mangement-content {
+.about-section .mangement-content {
   padding: 3rem;
 }
 
-.mangement-title h3 {
+.about-section .mangement-title h3 {
   font-size: 30px;
   margin-bottom: 7px;
 }
-.mangement-sub-title {
+.about-section .mangement-sub-title {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 400;
   color: #6b6b6b;
   margin-bottom: 10px;
 }
-.mangement-social-area {
+.about-section .mangement-social-area {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   border-bottom: 1px dashed #9dbafe;
 }
 
-.mangement-social {
+.about-section .mangement-social {
   display: flex;
 }
 
-.mangement-social li a {
+.about-section .mangement-social li a {
   width: 26px;
   height: 26px;
   line-height: 26px;
@@ -1725,7 +1715,7 @@ input::placeholder {
   color: #3295b3;
   margin-right: 0.45rem;
 }
-.mangement-social li :hover {
+.about-section .mangement-social li :hover {
   color: #ffffff;
   background-color: #008283;
 }
