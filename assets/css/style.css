@@ -11,7 +11,8 @@
   padding-bottom: 120px;
   /* background: transparent linear-gradient(241deg, #009798 0%, #002e2e 100%) 0%
     0% no-repeat padding-box; */
-   background: url(../images/Home/homepage-banner-BG-UL.gif) no-repeat center fixed;
+  background: url(../images/Home/homepage-banner-BG-UL.gif) no-repeat center
+    fixed;
 
   overflow: hidden;
   z-index: 9;
@@ -264,14 +265,15 @@
   position: relative;
   /* padding: 14px 30px; */
   border-radius: 6px;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   text-align: center;
   z-index: 2;
   overflow: hidden;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  width: 135px;
+  width: 160px;
+  left: 0.2rem;
 }
 .letstalk:hover {
   color: #fff;
@@ -288,9 +290,8 @@
     padding: 12px 26px;
   }
 }
-.testi-home
- {
-    padding-left: 40px;
+.testi-home {
+  padding-left: 40px;
 }
 /*--------------------------------------------------------------
   [ ## modelpopoup] //indexpage
@@ -421,6 +422,142 @@
   to {
     left: 200px;
   }
+}
+
+/* Container */
+.testimonial-hero {
+  position: relative;
+  width: 100%;
+  height: 550px; /* adjust if needed */
+  overflow: visible;
+}
+
+/* Base card */
+.testimonial-card {
+  position: absolute;
+  width: 300px;
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transition: left 0.4s ease, top 0.4s ease, transform 0.4s ease;
+  animation: float 6s ease-in-out infinite;
+  cursor: pointer;
+  color: inherit;
+  background: inherit;
+  z-index: 1;
+  transform: rotate(var(--r));
+}
+
+.testimonial-hint {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  z-index: 50;
+  pointer-events: none;
+  animation: pulseHint 1.5s ease-in-out infinite;
+}
+
+@keyframes pulseHint {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+/* Floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r));
+  }
+  50% {
+    transform: translateY(-12px) rotate(var(--r));
+  }
+}
+
+.testimonial-hero.stacked .testimonial-card:not(.active) {
+  animation-play-state: paused;
+
+  left: var(--stack-left);
+  top: var(--stack-top);
+  transform: translateY(0) rotate(var(--r)) scale(0.95);
+}
+
+/* the clicked (“active”) card stays scaled up and on top */
+.testimonial-card.active {
+  z-index: 30 !important;
+  transform: scale(1.08) translateY(0) rotate(var(--r));
+}
+
+/* Footer & avatar */
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.testimonial-footer h6 {
+  color: #fff;
+  font-size: 0.85rem; /* slightly smaller */
+  font-weight: 600; /* a bit bolder */
+  text-transform: uppercase; /* all caps for contrast */
+  letter-spacing: 0.5px; /* loosen it up */
+  margin: 0;
+  margin-top: 0.75rem;
+  opacity: 0.9; /* soften slightly against the card */
+}
+
+.testimonial-footer * {
+  color: #fff !important;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+/* Positions & delays for 5 cards */
+.card-1 {
+  top: 80px;
+  left: 28%;
+  animation-delay: 0s;
+  z-index: 2;
+}
+.card-2 {
+  top: 170px;
+  left: 22%;
+  animation-delay: 0.6s;
+  z-index: 1;
+}
+.card-3 {
+  top: 140px;
+  left: 48%;
+  animation-delay: 1.2s;
+  z-index: 3;
+}
+.card-4 {
+  top: 250px;
+  left: 55%;
+  animation-delay: 1.8s;
+  z-index: 1;
+}
+.card-5 {
+  top: 150px;
+  left: 65%;
+  animation-delay: 2.4s;
+  z-index: 2;
 }
 
 /*
@@ -1017,9 +1154,9 @@ textarea::placeholder {
   7.[Have A Project In Mind? Let's Connect /// about block ]
 -------------------------------------------------------------------*/
 
-.about-section .history-icon{
+.about-section .history-icon {
   color: #009798;
-font-size: 25px;
+  font-size: 25px;
 }
 
 .about-section .journey .video-section {
@@ -1042,11 +1179,9 @@ font-size: 25px;
   z-index: 1;
 }
 
-.about-section .journey p{
+.about-section .journey p {
   font-weight: 270;
 }
-
-
 
 .about-section .card {
   position: relative;
@@ -1080,7 +1215,12 @@ font-size: 25px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(60, 60, 60, 0.1); /* Adds an overlay for better text visibility */
+  background: rgba(
+    60,
+    60,
+    60,
+    0.1
+  ); /* Adds an overlay for better text visibility */
   transition: all 0.3s ease;
 }
 
@@ -1103,7 +1243,7 @@ font-size: 25px;
 }
 
 .about-section .card:hover .content h2 {
-margin-top: 0;
+  margin-top: 0;
 }
 
 .about-section .card:hover .content p {
@@ -1112,81 +1252,82 @@ margin-top: 0;
 }
 
 .about-section .card {
-	position: relative;
-	width: 400px;
-	background: radial-gradient(#111 50%, #000 100%);
-	overflow: hidden;
-	cursor: pointer;
+  position: relative;
+  width: 400px;
+  background: radial-gradient(#111 50%, #000 100%);
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .about-section img {
-	max-width: 100%;
-	display: block;
+  max-width: 100%;
+  display: block;
 }
 
 .about-section .card img {
-	transform: scale(1.3);
-	transition: 0.3s ease-out;
+  transform: scale(1.3);
+  transition: 0.3s ease-out;
 }
 
 .about-section .card:hover img {
-	transform: scale(1.1) translateY(-20px);
-	opacity: 0.3;
+  transform: scale(1.1) translateY(-20px);
+  opacity: 0.3;
 }
 
 .about-section .overlay {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 
-	padding: 15px;
-	text-align: center;
-	color: #fff;
+  padding: 15px;
+  text-align: center;
+  color: #fff;
 }
 
 .about-section .text-h1 {
-	transform: translateY(30px);
-	opacity: 0;
-	transition: all .3s ease-out;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 
 .about-section .text-p {
-	transform: translateY(30px);
-	opacity: 0;
-	transition: all .3s ease-out 0.2s;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.3s ease-out 0.2s;
 }
 
 .about-section .card:hover .overlay .text-h1 {
-	opacity: 1;
-	transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .about-section .card:hover .overlay .text-p {
-	opacity: 1;
-	transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.about-section .core-values{
+.about-section .core-values {
   background-color: #000000;
 }
 
-
-.about-section .previous{
+.about-section .previous {
   z-index: 100;
   /* background: rgba(0, 0, 0, 0.4) ; */
 }
 
-.about-section .previous{
+.about-section .previous {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.about-section .card:hover{ .previous{
-  display: none;
-}}
+.about-section .card:hover {
+  .previous {
+    display: none;
+  }
+}
 
 /*-------------------------------------------------------------------------------
  /////// 6.[Have A Project In Mind? Let's Connect /// about block ] end ////indexpage
@@ -1650,15 +1791,6 @@ input::placeholder {
 /* [featrures//] */
 
 /* [Meet our Mangement start//] Aboutuspage */
-
-
-
-
-
-
-
-
-
 
 .about-section .mangement-section {
   background-color: #f6f9ff;
