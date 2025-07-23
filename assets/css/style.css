@@ -149,7 +149,7 @@
 
 @media only screen and (max-width: 1485px) {
   .banner-widget-wrapper {
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -235,7 +235,7 @@
 }
 
 .banner-widget-wrapper .banner-widget-content p {
-  font-size: 15px;
+  font-size: 14px;
   width: 100%;
   color: #1c1c1c;
   font-weight: 600;
@@ -272,7 +272,7 @@
   overflow: hidden;
   -webkit-transition: all ease 0.5s;
   transition: all ease 0.5s;
-  width: 160px;
+  width: 100%;
   left: 0.2rem;
 }
 .letstalk:hover {
@@ -428,7 +428,7 @@
 .testimonial-hero {
   position: relative;
   width: 100%;
-  height: 550px; /* adjust if needed */
+  height: 500px; /* adjust if needed */
   overflow: visible;
 }
 
