@@ -776,9 +776,13 @@ h4 a:hover {
   color: #ffffff;
 }
 
+#homepage-hero-section-sub-title {
+  font-size: 20px;
+}
+
 .sub-title {
   font-size: 14px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 600;
   color: #ffb500;
   margin-bottom: 20px;
