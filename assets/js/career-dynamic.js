@@ -101,6 +101,8 @@ $(document).ready(function () {
     const urgencyClass =
       daysLeft <= 7 ? "urgent" : daysLeft <= 14 ? "moderate" : "normal";
 
+    const isExpired = daysLeft <= 0;
+
     return `
             <div class="col-lg-6 col-xl-4 col-md-6 mb-4">
                 <div class="job-card" data-recruitment='${JSON.stringify(
@@ -181,7 +183,9 @@ $(document).ready(function () {
                                 data-recruitment-id="${recruitment.id}">
                             <i class="las la-eye"></i> View Details
                         </button>
-                        <button class="btn btn-primary apply-btn" 
+                        <button class="btn btn-primary apply-btn ${
+                          isExpired ? "disabled" : ""
+                        }" 
                                 data-recruitment-id="${recruitment.id}"
                                 data-job-position-id="${firstPosition.id}"
                                 data-job-title="${escapeHtml(
@@ -189,8 +193,11 @@ $(document).ready(function () {
                                 )}"
                                 data-optional-resume="${
                                   recruitment.optional_resume
-                                }">
-                            <i class="las la-paper-plane"></i> Apply Now
+                                }"
+                                ${isExpired ? "disabled" : ""}>
+                            <i class="las la-paper-plane"></i> ${
+                              isExpired ? "Expired" : "Apply Now"
+                            }
                         </button>
                     </div>
                 </div>
@@ -252,6 +259,12 @@ $(document).ready(function () {
 
     // Format description with line breaks
     const formattedDescription = recruitment.description.replace(/\n/g, "<br>");
+
+    // Check if position is expired
+    const today = new Date();
+    const deadline = new Date(recruitment.end_date);
+    const daysLeft = Math.ceil((deadline - today) / (1000 * 60 * 60 * 24));
+    const isExpired = daysLeft <= 0;
 
     const modalContent = `
        <div class="job-details-content">
@@ -339,18 +352,22 @@ $(document).ready(function () {
 
          <div class="job-details-footer">
            <button class="btn btn-secondary" data-dismiss="modal">Close</button>
-           <button class="btn btn-primary apply-from-details" 
+           <button class="btn btn-primary apply-from-details ${
+             recruitment.closed || isExpired ? "disabled" : ""
+           }" 
                    data-recruitment-id="${recruitment.id}"
                    data-job-position-id="${
                      recruitment.open_positions[0]?.id || ""
                    }"
                    data-job-title="${escapeHtml(recruitment.title)}"
                    data-optional-resume="${recruitment.optional_resume}"
-                   ${recruitment.closed ? "disabled" : ""}>
+                   ${recruitment.closed || isExpired ? "disabled" : ""}>
              <i class="las la-paper-plane"></i> 
              ${
                recruitment.closed
                  ? "Position Closed"
+                 : isExpired
+                 ? "Position Expired"
                  : "Apply for this Position"
              }
            </button>
@@ -368,6 +385,11 @@ $(document).ready(function () {
    * Handle apply button clicks from details modal
    */
   $(document).on("click", ".apply-from-details", function () {
+    // Check if button is disabled
+    if ($(this).hasClass("disabled") || $(this).is(":disabled")) {
+      return false;
+    }
+
     $("#jobDetailsModal").modal("hide");
 
     // Trigger the application modal with the same data
@@ -404,6 +426,11 @@ $(document).ready(function () {
    * Handle apply button clicks
    */
   $(document).on("click", ".apply-btn", function () {
+    // Check if button is disabled
+    if ($(this).hasClass("disabled") || $(this).is(":disabled")) {
+      return false;
+    }
+
     const recruitmentId = $(this).data("recruitment-id");
     const jobPositionId = $(this).data("job-position-id");
     const jobTitle = $(this).data("job-title");
@@ -471,12 +498,9 @@ $(document).ready(function () {
         console.log("Application submitted successfully:", response);
 
         // Success handling
-        alert("Application submitted successfully! We will contact you soon.");
+        alert("Application submitted successfully!");
         $("#applicationModal").modal("hide");
         form.reset();
-
-        // Optional: You can also show a success message in a better way
-        // showSuccessMessage('Application submitted successfully!');
       },
       error: function (xhr, status, error) {
         console.error("Error submitting application:", error);
@@ -555,11 +579,8 @@ $(document).ready(function () {
     }
   });
 
-  /**
-   * Flexible URL validation function
-   */
   function isValidURL(string) {
-    if (!string) return true; // Empty is okay since it's optional
+    if (!string) return true;
 
     // Add protocol if missing
     let url = string;
@@ -571,7 +592,6 @@ $(document).ready(function () {
       new URL(url);
       return true;
     } catch (_) {
-      // Try basic pattern matching as fallback
       const pattern =
         /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/;
       return pattern.test(string);

@@ -300,11 +300,28 @@
 --------------------------------------------------------------*/
 .modal-backdrop {
   position: inherit;
+  animation-name: backdropFadeIn;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
 }
 
 .modal {
   left: auto;
   background: #000000d1;
+  transition: opacity 0.15s linear;
+}
+
+.modal-dialog {
+  transition: transform 0.15s ease-out;
 }
 .close-css {
   background-color: transparent;
@@ -328,18 +345,65 @@
   }
 }
 
-/* / Fading animation / */
+/* Modern Modal Animations */
 .fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+  animation-name: modalFadeIn;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-@keyframes fade {
+.modal-dialog {
+  animation-name: modalSlideIn;
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes modalFadeIn {
   from {
-    opacity: 0.4;
+    opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Alternative: Scale animation for modals */
+.modal.show .modal-dialog {
+  animation-name: modalScaleIn;
+  animation-duration: 0.25s;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes modalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes modalContentSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -3632,16 +3696,7 @@ form h4 {
   position: relative;
 }
 
-.open-positions .section-header p::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, #009798 0%, #087676 100%);
-}
+/* Underline removed for Current Opportunities */
 
 .open-positions .section-title {
   color: #1c1c1c;
@@ -3938,6 +3993,25 @@ form h4 {
   box-shadow: 0 4px 12px rgba(0, 151, 152, 0.3);
 }
 
+.job-card-footer .btn-primary.disabled,
+.job-card-footer .btn-primary:disabled {
+  background: #6c757d !important;
+  border-color: #6c757d !important;
+  color: #fff !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.job-card-footer .btn-primary.disabled:hover,
+.job-card-footer .btn-primary:disabled:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  background: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
 /* Loading and No Positions States */
 .spinner-border {
   color: #009798 !important;
@@ -3963,6 +4037,11 @@ form h4 {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   border: none;
+  animation-name: modalContentSlideIn;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
 }
 
 .modal-header {
@@ -4083,6 +4162,11 @@ form h4 {
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   border: none;
+  animation-name: modalContentSlideIn;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-delay: 0.1s;
+  animation-fill-mode: both;
 }
 
 .job-details-content {
@@ -4524,7 +4608,6 @@ form h4 {
     margin-bottom: 0;
   }
 
-  .open-positions .section-header p::after,
   .open-positions .section-title::after {
     width: 30px;
   }
