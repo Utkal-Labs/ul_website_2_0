@@ -1,17 +1,17 @@
 class SpecialHeader extends HTMLElement {
-  connectedCallback() {
-          // Add the Tawk.to live chat script
-          const tawkScript = document.createElement("script");
-          //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
-          //   document.body.appendChild(script);
-            tawkScript.async = true;
-            tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
-            tawkScript.charset = 'UTF-8';
-            tawkScript.setAttribute('crossorigin', '*');
-            document.head.appendChild(tawkScript);
-        
-            // Add the top header HTML content
-    this.innerHTML = `
+    connectedCallback() {
+        // Add the Tawk.to live chat script
+        const tawkScript = document.createElement("script");
+        //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
+        //   document.body.appendChild(script);
+        tawkScript.async = true;
+        tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
+        tawkScript.charset = 'UTF-8';
+        tawkScript.setAttribute('crossorigin', '*');
+        document.head.appendChild(tawkScript);
+
+        // Add the top header HTML content
+        this.innerHTML = `
            <header id="header" class="fixed-top d-flex flex-column">
            <div class="ecommerce-color-highlight marketplace-color-highlight food-delivery-highlight  education-highlight food-delivery-highlight rehabilitation-highlight saas-highlight vediostreming-highlight"></div>
            <div class="container2 d-flex justify-content-between mt-2 mx-auto">
@@ -21,21 +21,26 @@ class SpecialHeader extends HTMLElement {
               <!--  nav start-->
               <nav class="nav-menu d-none d-lg-block">
                   <ul class="nav-list">
-                      <!-- added a class for active -->
+                 <!-- added a class for active -->
                       <li class="nav-item"><a href="../../index.html">Home</a></li>
                       <li class="nav-item"><a href="../../aboutus.html">About Us</a></li>
                       <li class="nav-item drop-down"><a href="">Services<i class="fas fa-angle-down ml-1 ms-1 pt-1"></i></a>
                           <ul>
                               <li><a href="../../service.html">All Services</a></li>
+                               <li><a href="../../services/service-alml-solution/service-alml-solution.html">Al/ML Solution</a></li>
+             
+                              <li><a href="../../service-qa-services.html">QA Services</a></li>
+                               <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
+                               <li><a href="../../service-devops-consulting.html">Devops Consulting</a></li>
+                                  <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
+                              <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
+                           
                               <li><a href="../../service-web-mobile-application.html">Web & Mobile Application</a></li>
                               <li><a href="../../service-robotic-process-automation.html">Robotic Process Automation</a>
                               </li>
-                              <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
-                              <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
-                              <li><a href="../../service-devops-consulting.html">Devops Consulting</a></li>
-                              <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
-                              <li><a href="../../service-alml-solution.html">Al/ML Solution</a></li>
-                              <li><a href="../../service-qa-services.html">QA Services</a></li>
+                              
+                            
+                             
                           </ul>
                       </li>
   
@@ -75,27 +80,27 @@ class SpecialHeader extends HTMLElement {
           </div>
       </header>
           `;
-    this.updateActiveNav();
-  }
+        this.updateActiveNav();
+    }
 
-  updateActiveNav() {
-    const navItems = this.querySelectorAll(".nav-item a");
-    let currentPath = window.location.pathname;
-    currentPath = currentPath.slice(1, currentPath.length);
+    updateActiveNav() {
+        const navItems = this.querySelectorAll(".nav-item a");
+        let currentPath = window.location.pathname;
+        currentPath = currentPath.slice(1, currentPath.length);
 
-    navItems.forEach((item) => {
-      if (item.getAttribute("href") === currentPath) {
-        item.parentElement.classList.add("active");
-      } else {
-        item.parentElement.classList.remove("active");
-      }
-    });
-  }
+        navItems.forEach((item) => {
+            if (item.getAttribute("href") === currentPath) {
+                item.parentElement.classList.add("active");
+            } else {
+                item.parentElement.classList.remove("active");
+            }
+        });
+    }
 }
 
 class SpecialFooter extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
           <footer class="footer-section pt-120">
   
               <div class="waves_left">
@@ -230,7 +235,7 @@ class SpecialFooter extends HTMLElement {
   
       </footer>
           `;
-  }
+    }
 }
 
 customElements.define("special-header", SpecialHeader);
