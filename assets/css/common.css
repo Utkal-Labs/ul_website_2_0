@@ -1022,61 +1022,12 @@ input::-moz-focus-inner {
   padding-left: 5px;
 }
 
-/*-------------------------------------------------
-    [ ## Fields ]
-*/
-/* 
-input[type=text]:focus,
-input[type=email]:focus,
-input[type=password]:focus {
-    outline: none;
-}
-
-input,
-textarea {
-    padding: 12px 20px;
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-    color: #1C1C1C;
-}
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-    color: #1C1C1C;
-}
-
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
-    color: #1C1C1C;
-}
-
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
-    color: #1C1C1C;
-}
-
-input::placeholder,
-textarea::placeholder {
-    color: #1C1C1C;
-} */
-
 textarea {
   display: block;
   width: 100%;
   display: block;
   min-height: 120px;
 }
-
-/* input,
-select,
-textarea {
-    border: 1px solid #E2E2E2;
-    vertical-align: baseline;
-    font-size: 100%;
-    color: #1C1C1C;
-} */
 
 label {
   font-size: 15px;
