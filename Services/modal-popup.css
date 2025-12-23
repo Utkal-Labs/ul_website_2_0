@@ -1,0 +1,77 @@
+/*   
+  .ecommerce-modal-input {
+    background-color: #fbfbff;
+    border: solid 1px #aeb2f4;
+  }
+  
+  .get-start-btn {
+    background-color: #5864ff;
+    border: none;
+    border-radius: 40px;
+  }
+  
+  .modal-backdrop {
+    position: inherit;
+  }
+  
+  .modal {
+    left: auto;
+    background: #000000d1;
+  }
+  .close-css {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.5;
+  } */
+  
+
+  
+  /* / Fading animation / */
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .modal-backdrop {
+    position: inherit;
+  }
+  
+  .modal {
+    /* left: auto; */
+    background: #000000d1;
+    z-index: 200000 !important;
+  }
+  .close-css {
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #000;
+    opacity: 0.5;
+  }
+  
+  .modal-footer .btn {
+    border-radius: 5px;
+    background-color: #009798;
+    color: #fff;
+  }
+  .modal-footer .btn:hover {
+    background-color: #003030;
+  }
+  @media (max-width: 575px) {
+    .modal {
+      margin-top: 4.75rem;
+    }
+  }
