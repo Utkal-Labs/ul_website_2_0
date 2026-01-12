@@ -17,7 +17,7 @@ class SpecialHeader extends HTMLElement {
            <div class="container2 d-flex justify-content-between mt-2 mx-auto">
               <!--  logo -->
               <a href="../../index.html" class="logo mr-auto">
-                  <img src="../../assets/images/logo-utkallabs-christmas-newyear.gif" alt=""></a>
+                  <img src="../../assets/images/logo-ul.png" alt=""></a>
               <!--  nav start-->
               <nav class="nav-menu d-none d-lg-block">
                   <ul class="nav-list">
