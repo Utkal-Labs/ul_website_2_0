@@ -52,7 +52,7 @@ class SpecialHeader extends HTMLElement {
                               <li><a href="../../case-studies.html">Case Studies</a></li>
                               <li><a href="../../our-solutions.html">Our Solutions</a></li>
                               <li><a href="../../tech-byte.html">Tech Bytes</a></li>
-                              <li><a href="../../newsletter.html">Newsletter</a></li>
+                              <li><a href="../../monthlyinsights.html">Monthly Insights</a></li>
 
                           </ul>
                       </li>
@@ -170,8 +170,8 @@ class SpecialFooter extends HTMLElement {
                                   <ul class="footer-list">
                                       <li><a href="../../gallery.html">Gallery</a></li>
                                       <li><a href="../../portfolio.html">Portfolio</a></li>
-                                      <li><a href="../../newsletter.html">Newsletter</a></li>
-                                      <li><a href="../../case-studies.html">Case Studies</a></li>
+                                      <li><a href="../../monthlyinsights.html">Monthly Insights</a></li>
+                            <li><a href="../../case-studies.html">Case Studies</a></li>
                                   </ul>
                               </div>
                           </div>

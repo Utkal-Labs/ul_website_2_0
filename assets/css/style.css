@@ -3327,175 +3327,71 @@ form h4 {
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
- @@@@@@@@@@@@ E.1. newsletterpage start @@@@@@@@@@@@@
+ @@@@@@@@@@@@ E.1. MONTHLY INSIGHTS  page start @@@@@@@@@@@@@
 --------------------------------------------------------------*/
-.activity-newsletter {
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.newsletters {
-  display: flex;
-  justify-content: space-between;
+.monthlyinsights-section {
+  padding: 50px 0;
 }
 
-.newsletter {
-  align-items: end;
-  display: flex;
-  justify-content: center;
-  width: 95%;
+.monthlyinsights-viewer-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    padding: 18px;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.08);
+    transition: 0.5s ease;
 }
 
-.month-box {
-  position: absolute;
-  /* width: 20%; */
-  /* height: 20%; */
-  background: rgba(255, 255, 255, 0.98);
-  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.09);
-  border-radius: 10px 10px 0 0;
-  padding: 19px 32px;
+.monthlyinsights-viewer-wrapper:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 60px 120px rgba(0,0,0,0.15);
 }
 
-.month-box p {
-  font-weight: 700;
-  font-size: 20px;
-  color: #1c1c1c;
+.monthlyinsights-viewer-wrapper iframe {
+    border-radius: 14px;
+}
+.monthlyinsights-frame{
+  position: relative;
+  width:100%;
+  padding-top:56.25%;
+  overflow:hidden;
+  border-radius:14px;
 }
 
-.fa-download {
-  color: #ffffff;
+.monthlyinsights-frame iframe{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  border:0;
 }
 
-.Download-box {
-  display: flex;
-}
-
-.download_news {
-  background: #009798;
-  border: 1px solid #009798;
-  border-radius: 6px;
-  list-style: none;
-  font-weight: 500;
-  font-size: 16px;
-  /* height: 44px;
-  width: 235px; */
-  color: #ffffff;
-  justify-content: space-around;
-  /* display: flex; */
-  align-items: center;
-  padding: 10px 45px;
-}
-
-.download_news_icon {
-  padding-left: 10px;
-}
-/* @media (max-width:999px){
-  .newsletters{
-      display: block;
-  }
-
-  .month-box{
-      width: 300px;
-      margin-top: -10px;
-  }
-
-  .newsletter{
-      margin-top: 20px;
-  }
-} */
-
-/* Use for scroll */
-
-.direction {
-  text-align: center;
-}
-.direction button {
-  font-family: cursive;
-  font-weight: bold;
-  background-color: #009798;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: 0.5s;
-  margin: 2% 0.5%;
-  color: #ffffff;
-}
-.direction button:hover {
-  background-color: #005457;
-  color: #ffffff;
-}
-.item {
-  border-radius: 20px;
-  width: 500px;
-  /* height:397px; */
-  background-color: transparent;
-  overflow: hidden;
-  transition: 0.5s;
-  margin: 10px;
-  scroll-snap-align: start;
-}
-.item .avatar {
-  display: block;
-  object-fit: cover;
-  border-radius: 20px;
-  /* box-shadow: 0 10px 15px #7e878d; */
-}
-
-#list {
-  display: flex;
-  width: max-content;
-}
-#formList {
-  width: 1280px;
-  max-width: 100%;
-  overflow: auto;
-  /* margin:100px auto 50px; */
-  scroll-behavior: smooth;
-  scroll-snap-type: both;
-}
-#formList::-webkit-scrollbar {
-  display: none;
-}
-@media screen and (max-width: 1024px) {
-  .item {
-    width: calc(133.3vw - 10px);
+/* Mobile Optimization */
+@media(max-width:768px){
+  .monthlyinsights-viewer-wrapper{
+      padding: 10px;
+      border-radius: 14px;
   }
 }
-@media screen and (max-width: 768px) {
-  .item {
-    width: calc(88vw - 59px);
-  }
-}
-
-.flipbookkk {
-  /* margin-top: 15vh !important; */
-  margin-bottom: 5vh !important;
-}
-
-.flipbookkk-title {
-  color: #ffa200;
-  text-align: center;
-  font-size: 5vw !important;
-  font-family: "Poppins", Sans-serif;
-  font-weight: 900;
-  line-height: 75px;
-  text-shadow: 1px 3px 0px #373737;
-}
-
-@media (min-width: 768px) {
-  .flipbookkk-title {
-    font-size: 2.5vw !important;
+@media(min-width:1200px){
+  .monthlyinsights-viewer-wrapper{
+    max-width: 820px;
   }
 }
 
 /*--------------------------------------------------------------
-/////////////// E.1. newsletterpage end ///////////////////////
+/////////////// E.1. MONTHLY INSIGHTS page end ///////////////////////
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 @@@@@@@@@ portfoliopage start @@@@@@@@@@@
 --------------------------------------------------------------*/
-.portfolio-section .portfolio-section-area {
+
+.ul-portfolio-section .ul-portfolio-section-area {
   position: relative;
   width: 100%;
   height: 0;
@@ -3508,18 +3404,59 @@ form h4 {
   border-radius: 8px;
   will-change: transform;
 }
-
-/* .portfolio-section-item{
-  position: absolute; 
-  width: 100%; 
-  height: 100%; 
-  top: 0; 
-  left: 0; 
-  border: none; 
-  padding: 0;
-  margin: 0;
+.ul-portfolio-card{
+  background: linear-gradient(180deg,#ffffff,#f8fbff);
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 30px 70px rgba(0,0,0,0.12);
+  transition:.6s ease;
+  position:relative;
 }
- */
+
+.ul-portfolio-card:hover{
+  transform:none;
+  box-shadow:0 30px 70px rgba(0,0,0,0.12);
+}
+
+.monthlyinsights-frame{
+  position:relative;
+  width:100%;
+  padding-top:56.25%;
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 30px 60px rgba(0,0,0,.12);
+  
+}
+
+.monthlyinsights-frame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+@media(max-width:768px){
+  .monthlyinsights-section{padding:60px 0;}
+}
+
+.ul-portfolio-frame{
+  position:relative;
+  padding-top:56.25%;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid #e5e7eb;
+}
+
+.ul-portfolio-frame iframe{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
 
 /*--------------------------------------------------------------
 /////////////// portfoliopage end ///////////////////////
