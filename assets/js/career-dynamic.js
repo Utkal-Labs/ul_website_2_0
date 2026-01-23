@@ -4,12 +4,14 @@
  */
 
 $(document).ready(function () {
-  const BASE_URL = "http://20.244.84.8:8071";
+  // const BASE_URL = "http://20.244.84.8:8071";
+  const BASE_URL = "http://20.40.46.189";
 
   /**
    * Fetch open positions from the API
    */
   function fetchOpenPositions() {
+    alert(`${BASE_URL}/recruitment/api/open-recruitments/`);
     $.ajax({
       url: `${BASE_URL}/recruitment/api/open-recruitments/`,
       method: "GET",
@@ -18,6 +20,7 @@ $(document).ready(function () {
         displayPositions(response.recruitments);
       },
       error: function (xhr, status, error) {
+        alert("Error fetching positions" + error);
         console.error("Error fetching positions:", error);
         console.error("Status:", status);
         console.error("Response:", xhr.responseText);
