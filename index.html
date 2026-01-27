@@ -42,9 +42,8 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
   <!-- line-awesom css link //for icon use-->
-  <link rel="stylesheet"
-    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 
   <!-- swipper css link -->
   <link rel="stylesheet" href="assets/css/swiper.min.css">
@@ -72,11 +71,15 @@
 <body>
 
   <!--@@@ Modal Start @@@-->
+
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="myModalLabel">Contact Us</h4>
+          <h4 class="modal-title" id="myModalLabel">
+            Contact Us</h4>
+
+
           <button type="button" class="close close-css" data-dismiss="modal" aria-label="Close"><span
               aria-hidden="true">&times;</span></button>
         </div>
@@ -99,24 +102,22 @@
             </div>
             <div class="form-group mb-3">
               <label for="message" class="mb-1">Message:</label>
-              <textarea class="form-control" id="message" name="message" rows="3" placeholder="Enter message"
+              <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us about your idea…"
                 maxlength="1000" required></textarea>
             </div>
             <input type="hidden" name="redirectpage" id="" value="1">
             <div class="g-recaptcha mt-3" data-sitekey="6LekdHEpAAAAAN5FrOIsTeUG3G-0SQpYZJqCkB6J"></div>
             <div class="modal-footer">
-              <button type="submit" name="submit" class="btn btn-primary">Send message</button>
+              <button type="submit" name="submit" class="btn btn-primary">Request Free AI Audit</button>
             </div>
             <div id="responseMsg" class="mt-2">
-
             </div>
           </form>
-
-
         </div>
       </div>
     </div>
   </div>
+
   <!--//// Modal end ////-->
 
   <!-- /*--------------------------------------------------------------
@@ -138,28 +139,20 @@
 # Navbar Header end
 --------------------------------------------------------------*/ -->
 
-
   <!--   Start Preloader-->
   <div id="preloader"></div>
+  <!--====== End Preloader====================-->
 
-  <!--====================
-    End Preloader====================-->
-
-  <!--====================Start Scroll-To-Top====================-->
-  <!-- <a href="#" class="scrollToTop">
-        <i class="las la-angle-double-up"></i>
-    </a> -->
-  <!--====================
-    End Scroll-To-Top====================-->
 
   <!--====================
 Start Banner====================-->
   <section class="banner-section">
-    <!-- <div class="banner-text">
-      <span>UtkalLabs</span>
-    </div> -->
+    <video autoplay loop muted playsinline class="hero-bg">
+      <source src="assets/images/home/home-hero-bg.mp4" type="video/mp4">
+    </video>
 
     <div class="container custom-container">
+
       <div class="row align-items-end mb-30-none">
         <div class="col-xl-6 col-lg-6 mb-30">
           <div class="banner-content" data-aos="fade-right" data-aos-duration="1800">
@@ -170,13 +163,13 @@ Start Banner====================-->
             <span class="sub-title" id="homepage-hero-section-sub-title"> Transform user experiences, scale operations,
               and unlock new revenue streams fast.</span>
             <div class="banner-arrow">
-              <img src="assets/images/element/Arrow_element.png" alt="element">
+              <img src="assets/images/home/element/arrow_element.png" alt="element">
             </div>
             <div class="banner-widget">
               <div class="banner-widget-wrapper">
                 <div class="banner-widget-left">
                   <div class="banner-widget-thumb">
-                    <img src="assets/images/element/clint_element.png" alt="element">
+                    <img src="assets/images/home/element/clint_element.png" alt="element">
                   </div>
                 </div>
                 <div class="banner-widget-middle">
@@ -194,6 +187,7 @@ Start Banner====================-->
             </div>
           </div>
         </div>
+
         <div class="col-xl-6 col-lg-6 mb-30">
           <div class="testimonial-hero">
             <div class="testimonial-hint">
@@ -211,8 +205,7 @@ Start Banner====================-->
                 at Utkal Labs. They are the best of the best!
               </p>
               <div class="testimonial-footer">
-                <img src="./assets/images/HomePage/TestimonialAvatars/Grant_USA.png" alt="Grant’s avatar"
-                  class="avatar">
+                <img src="./assets/images/home/testimonial/profile-client/grant.png" alt="Grant’s avatar" class="avatar">
                 <h6>Grant (USA)</h6>
               </div>
             </div>
@@ -226,7 +219,7 @@ Start Banner====================-->
                 their professional experience. This has led to a great working relationship.
               </p>
               <div class="testimonial-footer">
-                <img src="./assets/images/HomePage/TestimonialAvatars/Rich_USA.png" alt="Rich’s avatar" class="avatar">
+                <img src="./assets/images/home/testimonial/profile-client/richard.png" alt="Rich’s avatar" class="avatar">
                 <h6>Rich (USA)</h6>
               </div>
             </div>
@@ -241,8 +234,7 @@ Start Banner====================-->
                 amazing people.
               </p>
               <div class="testimonial-footer">
-                <img src="./assets/images/HomePage/TestimonialAvatars/Talia_USA.png" alt="Talia’s avatar"
-                  class="avatar">
+                <img src="./assets/images/home/testimonial/profile-client/talia.png" alt="Talia’s avatar" class="avatar">
                 <h6>Talia (USA)</h6>
               </div>
             </div>
@@ -256,7 +248,7 @@ Start Banner====================-->
                 available to support and respond throughout the day.
               </p>
               <div class="testimonial-footer">
-                <img src="./assets/images/HomePage/TestimonialAvatars/Azam_Aus.png" alt="Azam’s avatar" class="avatar">
+                <img src="./assets/images/home/testimonial/profile-client/azam.png" alt="Azam’s avatar" class="avatar">
                 <h6>Azam (Australia)</h6>
               </div>
             </div>
@@ -264,18 +256,19 @@ Start Banner====================-->
             <!-- 5) Léa -->
             <div class="testimonial-card card-5" style="--r:3deg; background:#2B365E; color:#FFF;">
               <p>
-                Utkal Labs Private Limited successfully delivered the app to a high standard. The team ensured stellar project management and communicated via email, virtual meetings, and messaging apps. 
+                Utkal Labs Private Limited successfully delivered the app to a high standard. The team ensured stellar
+                project management and communicated via email, virtual meetings, and messaging apps.
                 Their authenticity, company culture, and work ethic were key elements of their work.
               </p>
               <div class="testimonial-footer">
-                <img src="./assets/images/HomePage/TestimonialAvatars/Lead_Media.png" alt="Léa’s avatar" class="avatar">
+                <img src="./assets/images/home/testimonial/profile-client/leadmedia.png" alt="Léa’s avatar" class="avatar">
                 <h6>Lead Software Engineer, Media Company</h6>
               </div>
             </div>
           </div>
         </div>
 
-        
+
       </div>
     </div>
 
@@ -321,8 +314,8 @@ End Banner
           <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="software-tab">
               <div class="choose-item">
-                <div class="choose-thumb">
-                  <img src="assets/images/Home/technicalsolutions_homepage.png" alt="element">
+                <div class="choose-thumb ai-zoom-wrap">
+                  <img src="assets/images/home/whychoose/home-technical-solutions.png" alt="element">
                 </div>
                 <div class="choose-content">
                   <h4 class="title"><span class="text--base">Utkal Labs: </span> Technical Solutions
@@ -336,8 +329,8 @@ End Banner
             </div>
             <div class="tab-pane fade show active" id="company" role="tabpanel" aria-labelledby="company-tab">
               <div class="choose-item">
-                <div class="choose-thumb">
-                  <img src="assets/images/Home/FastestGrowingCompany.png" alt="element">
+                <div class="choose-thumb ai-zoom-wrap">
+                  <img src="assets/images/home/whychoose/home-quality-and-commitment.png" alt="element">
                 </div>
                 <div class="choose-content">
                   <h4 class="title"><span class="text--base">Utkal Labs: </span> Quality and
@@ -354,8 +347,8 @@ End Banner
             </div>
             <div class="tab-pane fade" id="client" role="tabpanel" aria-labelledby="client-tab">
               <div class="choose-item">
-                <div class="choose-thumb">
-                  <img src="assets/images/Home/technicalpartner_homepage.png" alt="element">
+                <div class="choose-thumb ai-zoom-wrap">
+                  <img src="assets/images/home/whychoose/home-technology-partner.png" alt="element">
                 </div>
                 <div class="choose-content">
                   <h4 class="title"><span class="text--base">Meet Utkal Labs: </span> Your Technology
@@ -380,7 +373,7 @@ End Banner
 
 
   <!--====================
-   4. Start Service
+   4. Start Service //indexpage
 ====================-->
   <section class="service-section ptb-120">
 
@@ -404,7 +397,7 @@ End Banner
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
           <div class="service-item">
             <div class="service-icon">
-              <img src="assets/images/service-icon/1.Web & Mobile Application.png" alt="icon">
+              <img src="assets/images/service/service-icon/1.service-web-mobile-application.png" alt="icon">
             </div>
             <div class="service-content">
               <h6 class="title"><a href="service-web-mobile-application.html">Web & Mobile Application</a>
@@ -420,7 +413,7 @@ End Banner
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
           <div class="service-item">
             <div class="service-icon">
-              <img src="assets/images/service-icon/6.Enterprise Solution.png" alt="icon">
+              <img src="assets/images/service/service-icon/6.service-enterprise-solution.png" alt="icon">
             </div>
             <div class="service-content">
               <h6 class="title"><a href="service-enterprise-solution.html">Enterprise Solution</a></h6>
@@ -435,7 +428,7 @@ End Banner
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
           <div class="service-item">
             <div class="service-icon">
-              <img src="assets/images/service-icon/5.DevOps Consulting.png" alt="icon">
+              <img src="assets/images/service/service-icon/5.service-devops-consulting.png" alt="icon">
             </div>
             <div class="service-content">
               <h6 class="title"><a href="service-devops-consulting.html">DevOps Consulting</a></h6>
@@ -450,7 +443,7 @@ End Banner
         <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 mb-30">
           <div class="service-item">
             <div class="service-icon">
-              <img src="assets/images/service-icon/4.Digital Transformation.png" alt="icon">
+              <img src="assets/images/service/service-icon/4.service-digital-transformation.png" alt="icon">
             </div>
             <div class="service-content">
               <h6 class="title"><a href="service-digital-transformation.html">Digital Transformation</a>
@@ -470,52 +463,48 @@ End Banner
     End Service
 ====================-->
 
-
-
-
-
-  <!--====================
-5. Have A Project In Mind?  Start About
-====================-->
-  <section class="about-section">
+  <!--========== 5. Have A Project In Mind?  cta-connect=========-->
+  
+  <section class="cta-connect py-5 py-lg-7">
     <div class="container">
+      <div class="row align-items-center">
 
-      <div class="about-area">
-        <div class="row justify-content-center align-items-center mb-30-none">
-          <div class="col-xl-6 col-lg-6 ">
-            <div class="about-thumb">
-              <img src="assets/images/element/element-38.png" alt="element">
-            </div>
-          </div>
+        <!-- Illustration -->
+        <div class="col-lg-5 text-center text-lg-left mb-4 mb-lg-0 d-none d-md-block">
+          <img src="assets/images/home/home-project-in-mind.png" class="img-fluid cta-img" alt="Have a project in mind">
+        </div>
 
+        <!-- Content -->
+        <div class="col-lg-7">
+          <div class="cta-content">
 
-          <div class="col-xl-6 col-lg-6 mb-30">
-            <div class="about-content">
-              <h2 class="title">Have a project in mind? <span class="text--base">Let's connect</span></h2>
-              <p>Welcome to Utkal Labs, a software development organization, that will help to digitize
-                your business
-                by offering all the prime services such as Web & Mobile Applications, Enterprise
-                Solutions, DevOps Consulting, Digital Transformation, and AI/ML Solutions.
-              </p>
-              <div class="about-btn">
-                <a href="#" class="btn--base" data-toggle="modal" data-target="#myModal">Send
-                  Message</a>
+            <h2 class="cta-title mb-3">
+              Have a project in mind?<br>
+              <span class="cta-highlight">Let’s Connect</span>
+            </h2>
 
-              </div>
-            </div>
+            <p class="cta-text mb-4">
+              Welcome to Utkal Labs, a software development organization, that will help to digitize your
+              business by offering all the prime services such as Web & Mobile Applications, Enterprise
+              Solutions, DevOps Consulting, Digital Transformation, and AI/ML Solutions.
+            </p>
+
+            <a href="#" class="btn--base" data-toggle="modal" data-target="#myModal">
+              Send Message
+            </a>
+
           </div>
         </div>
+
       </div>
     </div>
   </section>
-  <!--====================
-   5.Have A Project In Mind? End About
-====================-->
+
+  <!------//////  5.Have A Project In Mind?end cta-connect ///////=========-->
 
 
-  <!--====================
-  6.testimonials-section // What Our Clients Say
-====================-->
+  <!--======== 6.testimonials-section // What Our Clients Say//index ==========-->
+
   <section id="testimonials-section" class="testimonials-section ptb-80">
 
     <div class="container">
@@ -543,17 +532,25 @@ End Banner
 
                   <div class="swiper-slide">
                     <div class="testimonials-item">
+                      <!-- video-testimonial-play button add -->
+                      <button class="video-testimonial-btn"
+                        data-video="assets/images/home/testimonial/vedio-client/home-client-vedio-grant.mp4">
+                        <span></span>
+                      </button>
+                      <!-- 1) Grant -->
                       <div class="testimonials-content">
-                        <p>Working with Utkal Labs was an extraordinary experience. Every member
-                          of their team is engaged, actively listening and reporting back with
-                          incredible results. They understand technology and are ahead of the
-                          trends. If you are looking for a development company look no further
-                          than the team at Utkal Labs. They are the best of the best!
+                        <p> Working with Utkal Labs was an extraordinary experience. Every member of their team is
+                          engaged,
+                          actively listening and reporting back with incredible results. They understand technology and
+                          are
+                          ahead of the trends. If you are looking for a development company look no further than the
+                          team
+                          at Utkal Labs. They are the best of the best!
                         </p>
                       </div>
                       <div class="testimonials-footer">
                         <div class="testimonials-footer-user-thumb">
-                          <img src="assets/images/testimonials/testimonials-1.png " alt="testimonials">
+                          <img src="./assets/images/home/testimonial/profile-client/grant.png" alt="Grant’s avatar" class="avatar">
                         </div>
                         <div class="testimonials-footer-user-content">
                           <h6 class="title">Grant (USA)</h6>
@@ -561,30 +558,35 @@ End Banner
                       </div>
                     </div>
                   </div>
-
+                  <!-- 2) Rich -->
                   <div class="swiper-slide">
                     <div class="testimonials-item">
+                      <button class="video-testimonial-btn"
+                        data-video="assets/images/home/testimonial/vedio-client/home-client-vedio-richard.mp4">
+                        <span></span>
+                      </button>
                       <div class="testimonials-content">
-                        <p>My experience working with the Utkal Labs team has been exceptional.
-                          Even with the time difference, my Utkal Labs team is responsive and
-                          has delivered an excellent product based on my specifications. They
-                          go beyond simply building to requirements, they offer advice and
-                          options along the way, lending their professional experience. This
-                          has led to a great working relationship.
+                        <p> My experience working with the Utkal Labs team has been exceptional. Even with the time
+                          difference,
+                          my Utkal Labs team is responsive and has delivered an excellent product based on my
+                          specifications.
+                          They go beyond simply building to requirements—they offer advice and options along the way,
+                          lending
+                          their professional experience. This has led to a great working relationship.
                         </p>
                       </div>
                       <div class="testimonials-footer">
                         <div class="testimonials-footer-user-thumb">
-                          <img src="assets/images/testimonials/testimonials-2.png " alt="testimonials">
+                          <img src="./assets/images/home/testimonial/profile-client/richard.png" alt="Rich’s avatar" class="avatar">
                         </div>
                         <div class="testimonials-footer-user-content">
-                          <h6 class="title">Rick (USA)</h6>
+                          <h6 class="title">Richard (USA)</h6>
                         </div>
                       </div>
                     </div>
                   </div>
 
-
+                  <!-- 3) Azam -->
                   <div class="swiper-slide">
                     <div class="testimonials-item">
                       <div class="testimonials-content">
@@ -599,7 +601,7 @@ End Banner
                       </div>
                       <div class="testimonials-footer">
                         <div class="testimonials-footer-user-thumb">
-                          <img src="assets/images/testimonials/testimonials-3.png " alt="testimonials">
+                          <img src="./assets/images/home/testimonial/profile-client/azam.png" alt="Azam’s avatar" class="avatar">
                         </div>
                         <div class="testimonials-footer-user-content">
                           <h6 class="title">Azam (Australia)</h6>
@@ -607,6 +609,171 @@ End Banner
                       </div>
                     </div>
                   </div>
+
+
+                  <!-- 4) Talia -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+                      <button class="video-testimonial-btn"
+                        data-video="assets/images/home/testimonial/vedio-client/home-client-vedio-talia.mp4">
+                        <span></span>
+                      </button>
+                      <div class="testimonials-content">
+                        <p> A heartfelt thank you to Utkal Labs for turning my visions, dreams, and goals into reality.
+                          All the
+                          hard work and dedication you’ve put in has truly changed my life for the better. I never
+                          imagined I’d
+                          be where I am today without your support. You are all incredibly creative, kind, hardworking,
+                          and
+                          genuine and for that, I’m deeply grateful. Thank you once again. Truly an amazing company with
+                          amazing people.
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/talia.png" alt="Talia’s avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Talia (USA)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 5) Léa -->
+
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+                      <div class="testimonials-content">
+                        <p> A heartfelt thank you to Utkal Labs for turning my visions, dreams, and goals into reality.
+                          All the
+                          hard work and dedication you’ve put in has truly changed my life for the better. I never
+                          imagined I’d
+                          be where I am today without your support. You are all incredibly creative, kind, hardworking,
+                          and
+                          genuine and for that, I’m deeply grateful. Thank you once again. Truly an amazing company with
+                          amazing people.
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/leadmedia.png" alt="Léa’s avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Lead Software Engineer, Media Company</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 6) Randy -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+                      <button class="video-testimonial-btn"
+                        data-video="assets/images/home/testimonial/vedio-client/home-client-vedio-randy.mp4">
+                        <span></span>
+                      </button>
+                      <div class="testimonials-content">
+                        <p> I am Randy, one of the co-founders at Satisfi Labs, and I would like to recognize Prava from Utkal Labs for her excellent work on our enterprise bot management system. She is steady, dependable, and hardworking, consistently keeping our technology ahead of the competition. Prava is proactive, always ready for new challenges, and we sincerely appreciate her dedication as we continue improving our platform.
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/randy.png" alt="Randy avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Randy (USA)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+             <!-- 6) laxmidhar -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+                      <button class="video-testimonial-btn"
+                        data-video="assets/images/home/testimonial/vedio-client/home-client-vedio-laxmidhar.mp4">
+                        <span></span>
+                      </button>
+                      <div class="testimonials-content">
+                        <p>
+                       We have been working with Utkal Labs on the development of the Vita platform for a long time. Their team is highly competent, technically strong, and extremely professional. They listen attentively to our challenges, ideas, and concerns, and provide prompt, effective solutions. Utkal Labs is a genuine, tech-driven, dedicated team. We value this collaboration and look forward to continued success together.
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/laxmidhar.png" alt="Laxmidhar avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Laxmidhar (India)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+    <!-- 7) Naresh -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+              
+                      <div class="testimonials-content">
+                        <p> I would like to take a moment to appreciate and acknowledge the incredible work the Utkal Labs team has done in building the lending app on the ONDC platform. With minimal input and guidance from my side, you worked independently, took ownership, and coordinated seamlessly with multiple ONDC stakeholders to move the project forward.
+
+Thanks to your persistence and dedication, we are now well-positioned to take our product to market.
+
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/naresh.png" alt="naresh avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Naresh (India)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+    <!-- 7) Jack and Taylor -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+              
+                  <p>   <div class="testimonials-content">
+The Utkal Labs team has done an outstanding job over the past year. I truly appreciate the time and effort invested in this project, and launching the initial version on the App Store was a major achievement. Despite some team changes, we now have an excellent group ready to deliver the best product. Jack and I look forward to the upcoming app release.
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/jackandtaylor.png" alt="Jack and Taylor avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Jack and Taylor (USA)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+<!-- 8) Sukino -->
+                  <div class="swiper-slide">
+                    <div class="testimonials-item">
+              
+                      <div class="testimonials-content">
+                        <p> It has been a wonderful journey of 2.5 years working with the talented team at Utkal Labs. What began as a professional engagement has grown into a strong partnership built on trust, commitment, and collaboration.
+
+I would especially like to acknowledge the efforts of the Utkal Labs team and wish them continued success in all their future endeavors.
+                        </p>
+                      </div>
+                      <div class="testimonials-footer">
+                        <div class="testimonials-footer-user-thumb">
+                          <img src="./assets/images/home/testimonial/profile-client/Sukino.png" alt="Sukino avatar" class="avatar">
+                        </div>
+                        <div class="testimonials-footer-user-content">
+                          <h6 class="title">Saroj (India)</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
 
                 </div>
 
@@ -625,9 +792,7 @@ End Banner
     </div>
   </section>
 
-  <!--====================
-6. End testimonials-section // What Our Clients Say 
-====================-->
+  <!--========= 6. End testimonials-section // What Our Clients Say //index ================-->
 
   <!--====================
     7.Get Newsletter From Utkal Labs//Start Call-to-action
@@ -636,10 +801,11 @@ End Banner
     <div class="container">
       <div class="subscribe-area">
         <div class="subscribe-element-two">
-          <img src="assets/images/Home/GetNewsletter.png" alt="element">
+          <img src="assets/images/home/getnewsletter/home-newsletter.png" alt="element">
         </div>
         <div class="row justify-content-center">
           <div class="col-xl-7 offset-xl-5">
+            
             <div class="subscribe-content">
               <h2 class="title">Get Newsletter From Utkal Labs</h2>
               <p>Want to look at the most coveted serial publication of Utkal Labs that not only keeps
@@ -667,50 +833,31 @@ End Banner
   <!--====================
     7.Get Newsletter From UtkalLabsEnd Call-to-action
 ====================-->
-
-  <section class="logoMarqueeSection">
-    <div class="container" id="logoMarqueeSection">
-      <div class="default-content-container flex items-center">
-        <div class="default-content-container-inner marquee-wrapper relative overflow-hidden inline-block">
-          <div class="marquee" style="animation-duration: 30s;">
-            <a target="_blank"><img src="assets/images/marquee/iso2015.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-            <a target="_blank"><img src="assets/images/marquee/nasscom.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-            <a target="_blank"><img src="assets/images/marquee/startupodisha.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-            <a target="_blank"><img src="assets/images/marquee/msmeregistered.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-
-            <a target="_blank"><img src="assets/images/marquee/stpiregistered.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-          </div>
-          <div class="marquee" style="animation-duration: 30s;">
-            <a target="_blank"><img src="assets/images/marquee/iso2015.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-            <a target="_blank"><img src="assets/images/marquee/nasscom.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-            <a target="_blank"><img src="assets/images/marquee/startupodisha.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-            <a target="_blank"><img src="assets/images/marquee/msmeregistered.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-
-            <a target="_blank"><img src="assets/images/marquee/stpiregistered.svg" title="" class="marqueelogo"
-                style="width: auto; max-width: none;"></a>
-
-
-          </div>
+<section class="logoMarqueeSection">
+  <div class="container logoMarqueeContainer">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <!-- Logo Set -->
+        <div class="marquee">
+          <a><img src="assets/images/marquee/iso2015.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/nasscom.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/startupodisha.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/msmeregistered.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/stpiregistered.svg" class="marqueelogo"></a>
         </div>
-  </section>
+
+        <!-- Clone for seamless loop -->
+        <div class="marquee clone">
+          <a><img src="assets/images/marquee/iso2015.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/nasscom.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/startupodisha.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/msmeregistered.svg" class="marqueelogo"></a>
+          <a><img src="assets/images/marquee/stpiregistered.svg" class="marqueelogo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!--====================@@ Start Footer @@====================-->
 
@@ -722,7 +869,7 @@ End Banner
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="assets/js/jquery-3.6.0.min.js"></script>
-  <script src="assets/js/jquery.min.js"></script>
+  <!-- <script src="assets/js/jquery.min.js"></script> -->
   <!-- Marquee js -->
   <!-- bootstrap js -->
   <script src="assets/js/bootstrap.min.js"></script>
@@ -755,6 +902,15 @@ End Banner
 
 
   <script src="assets/js/footer.animation.js"></script>
+
+  <!-- Video Testimonial Popup Modal//client tesimonial section/index -->
+  <div class="video-modal" id="videoModal">
+    <div class="video-modal-box">
+      <button class="video-close">×</button>
+      <video id="localVideo" controls playsinline></video>
+    </div>
+  </div>
+
 
 </body>
 
