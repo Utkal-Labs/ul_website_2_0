@@ -1477,7 +1477,7 @@ textarea::placeholder {
 --------------------------------------------------------------*/
 .testimonials-section {
   background-color: #003939;
-  background: url(../images/home/testimonial/home-testimonial-bg.png)
+  background: url(../images/index/testimonial/home-testimonial-bg.png)
     no-repeat center fixed;
 }
 .testimonials-section .testimonials-info h3 {

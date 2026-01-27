@@ -20,21 +20,21 @@ class SpecialTopHeader extends HTMLElement {
   
                 <div class="topnavbar-call2">
                   <a href="mailto:sales@utkallabs.com">
-                    <img src="assets/images/gmail.png" alt="Email" width="18" height="18">
+                    <img src="assets/images/icon/gmail.png" alt="Email" width="18" height="18">
                     <span>sales@utkallabs.com</span>
                   </a>
                 </div>
   
                 <div class="topnavbar-call2">
                   <a href="tel:+91 93383 08255">
-                    <img src="assets/images/india.png" alt="INDIA Flag" width="18" height="18">
+                    <img src="assets/images/icon/india.png" alt="INDIA Flag" width="18" height="18">
                     <span>+91 93383 08255</span>
                   </a>
                 </div>
   
                 <div class="topnavbar-call2">
                   <a href="tel:+1 32390 05072">
-                    <img src="assets/images/usa.png" alt="USA Flag" width="18" height="18">
+                    <img src="assets/images/icon/usa.png" alt="USA Flag" width="18" height="18">
                     <span>+1 32390 05072</span>
                   </a>
                 </div>
@@ -69,7 +69,7 @@ class SpecialHeader extends HTMLElement {
           <div class="container2 d-flex ">
               <!--  logo -->
               <a href="index.html" class="logo mr-auto">
-                  <img src="assets/images/logo-ul.png" alt=""></a>
+                  <img src="assets/images/logo/logo-utkallabs.png" alt=""></a>
               <!--  nav start-->
               <nav class="nav-menu d-none d-lg-block">
                   <ul class="nav-list">
@@ -174,7 +174,7 @@ class SpecialFooter extends HTMLElement {
                       <div class="footer-widget pr-5">
                           <div class="footer-logo">
                               <a href="index.html">
-                                  <img src="assets/images/logo-two-white.png" alt="site-logo">
+                                  <img src="assets/images/logo/logo-utkallabs-white.png" alt="site-logo">
   
                               </a>
                           </div>

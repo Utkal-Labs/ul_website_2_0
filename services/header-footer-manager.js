@@ -17,7 +17,7 @@ class SpecialHeader extends HTMLElement {
            <div class="container2 d-flex justify-content-between mt-2 mx-auto">
               <!--  logo -->
               <a href="../../index.html" class="logo mr-auto">
-                  <img src="../../assets/images/logo-ul.png" alt=""></a>
+                  <img src="../../assets/images/logo/logo-utkallabs.png" alt=""></a>
               <!--  nav start-->
               <nav class="nav-menu d-none d-lg-block">
                   <ul class="nav-list">
@@ -125,7 +125,7 @@ class SpecialFooter extends HTMLElement {
                       <div class="footer-widget pr-5">
                           <div class="footer-logo">
                               <a href="../../index.html">
-                                  <img src="../../assets/images/logo-two-white.png" alt="site-logo">
+                                  <img src="../../assets/images/logo/logo-utkallabs-white.png" alt="site-logo">
   
                               </a>
                           </div>
