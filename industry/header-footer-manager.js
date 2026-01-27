@@ -120,7 +120,7 @@ class SpecialFooter extends HTMLElement {
                       <div class="footer-widget pr-5">
                           <div class="footer-logo">
                               <a href="../../index.html">
-                                  <img src="../../assets/images/logo-two-white.png" alt="site-logo">
+                                  <img src="../../assets/images/logo/logo-utkallabs-white.png" alt="site-logo">
   
                               </a>
                           </div>
