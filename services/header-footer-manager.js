@@ -83,19 +83,35 @@ class SpecialHeader extends HTMLElement {
         this.updateActiveNav();
     }
 
-    updateActiveNav() {
-        const navItems = this.querySelectorAll(".nav-item a");
-        let currentPath = window.location.pathname;
-        currentPath = currentPath.slice(1, currentPath.length);
+updateActiveNav() {
+  const currentPath = window.location.pathname;
+  const navLinks = this.querySelectorAll(".nav-list a");
 
-        navItems.forEach((item) => {
-            if (item.getAttribute("href") === currentPath) {
-                item.parentElement.classList.add("active");
-            } else {
-                item.parentElement.classList.remove("active");
-            }
-        });
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+
+    // Ignore empty, #, or dropdown toggles
+    if (!href || href === "#" || href === "") return;
+
+    const linkPath = new URL(href, window.location.origin).pathname;
+    const li = link.closest("li");
+
+    // Clear previous state
+    li.classList.remove("active");
+
+    // Exact match
+    if (currentPath === linkPath) {
+      li.classList.add("active");
+
+      // 🔥 Activate parent dropdown (Services / Industries / Publications)
+      const parentDropdown = li.closest(".drop-down");
+      if (parentDropdown) {
+        parentDropdown.classList.add("active");
+      }
     }
+  });
+}
+ 
 }
 
 class SpecialFooter extends HTMLElement {
