@@ -20,21 +20,21 @@ class SpecialTopHeader extends HTMLElement {
   
                 <div class="topnavbar-call2">
                   <a href="mailto:sales@utkallabs.com">
-                    <img src="assets/images/gmail.png" alt="Email" width="18" height="18">
+                    <img src="assets/images/icon/gmail.png" alt="Email" width="18" height="18">
                     <span>sales@utkallabs.com</span>
                   </a>
                 </div>
   
                 <div class="topnavbar-call2">
                   <a href="tel:+91 93383 08255">
-                    <img src="assets/images/india.png" alt="INDIA Flag" width="18" height="18">
+                    <img src="assets/images/icon/india.png" alt="INDIA Flag" width="18" height="18">
                     <span>+91 93383 08255</span>
                   </a>
                 </div>
   
                 <div class="topnavbar-call2">
                   <a href="tel:+1 32390 05072">
-                    <img src="assets/images/usa.png" alt="USA Flag" width="18" height="18">
+                    <img src="assets/images/icon/usa.png" alt="USA Flag" width="18" height="18">
                     <span>+1 32390 05072</span>
                   </a>
                 </div>
@@ -69,25 +69,28 @@ class SpecialHeader extends HTMLElement {
           <div class="container2 d-flex ">
               <!--  logo -->
               <a href="index.html" class="logo mr-auto">
-                  <img src="assets/images/logo.png" alt=""></a>
+                  <img src="assets/images/logo/logo-utkallabs.png" alt=""></a>
               <!--  nav start-->
               <nav class="nav-menu d-none d-lg-block">
                   <ul class="nav-list">
                       <!-- added a class for active -->
-                      <li class="nav-item"><a href="index.html">Home</a></li>
-                      <li class="nav-item"><a href="aboutus.html">About Us</a></li>
-                      <li class="nav-item drop-down"><a>Services<i class="fas la-angle-down ms-1 pt-1 "></i></a>
+                         <li class="nav-item"><a href="../../index.html">Home</a></li>
+                      <li class="nav-item"><a href="../../aboutus.html">About Us</a></li>
+                      <li class="nav-item drop-down"><a href="">Services<i class="fas fa-angle-down ml-1 ms-1 pt-1"></i></a>
                           <ul>
-                              <li><a href="service.html">All Services</a></li>
-                              <li><a href="service-web-mobile-application.html">Web & Mobile Application</a></li>
-                              <li><a href="service-robotic-process-automation.html">Robotic Process Automation</a>
+                              <li><a href="../../service.html">All Services</a></li>
+                               <li><a href="../../services/service-alml-solution/service-alml-solution.html">Al/ML Solution</a></li>
+             
+                              <li><a href="../../service-qa-services.html">QA Services</a></li>
+                               <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
+                               <li><a href="../../service-devops-consulting.html">Devops Consulting</a></li>
+                                  <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
+                              <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
+                           
+                              <li><a href="../../service-web-mobile-application.html">Web & Mobile Application</a></li>
+                              <li><a href="../../service-robotic-process-automation.html">Robotic Process Automation</a>
                               </li>
-                              <li><a href="service-blockchain-nft.html">Blockchain & NFT</a></li>
-                              <li><a href="service-digital-transformation.html">Digital Transformation</a></li>
-                              <li><a href="service-devops-consulting.html">Devops Consulting</a></li>
-                              <li><a href="service-enterprise-solution.html">Enterprise Solution</a></li>
-                              <li><a href="service-alml-solution.html">Al/ML Solution</a></li>
-                              <li><a href="service-qa-services.html">QA Services</a></li>
+                              
                           </ul>
                       </li>
   
@@ -99,7 +102,7 @@ class SpecialHeader extends HTMLElement {
                               <li><a href="case-studies.html">Case Studies</a></li>
                               <li><a href="our-solutions.html">Our Solutions</a></li>
                               <li><a href="tech-byte.html">Tech Bytes</a></li>
-                              <li><a href="newsletter.html">Newsletter</a></li>
+                              <li><a href="monthlyinsights.html">Monthly Insights</a></li>
                           </ul>
                       </li>
                      <li class="nav-item drop-down"><a href="#">Industries<i class="fas la-angle-down ms-1 pt-1 "></i></a>
@@ -129,19 +132,35 @@ class SpecialHeader extends HTMLElement {
     this.updateActiveNav();
   }
 
-  updateActiveNav() {
-    const navItems = this.querySelectorAll(".nav-item a");
-    let currentPath = window.location.pathname;
-    currentPath = currentPath.slice(1, currentPath.length);
+updateActiveNav() {
+  const currentPath = window.location.pathname;
+  const navLinks = this.querySelectorAll(".nav-list a");
 
-    navItems.forEach((item) => {
-      if (item.getAttribute("href") === currentPath) {
-        item.parentElement.classList.add("active");
-      } else {
-        item.parentElement.classList.remove("active");
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+
+    // Ignore empty, #, or dropdown toggles
+    if (!href || href === "#" || href === "") return;
+
+    const linkPath = new URL(href, window.location.origin).pathname;
+    const li = link.closest("li");
+
+    // Clear previous state
+    li.classList.remove("active");
+
+    // Exact match
+    if (currentPath === linkPath) {
+      li.classList.add("active");
+
+      // 🔥 Activate parent dropdown (Services / Industries / Publications)
+      const parentDropdown = li.closest(".drop-down");
+      if (parentDropdown) {
+        parentDropdown.classList.add("active");
       }
-    });
-  }
+    }
+  });
+}
+ 
 }
 
 class SpecialFooter extends HTMLElement {
@@ -171,7 +190,7 @@ class SpecialFooter extends HTMLElement {
                       <div class="footer-widget pr-5">
                           <div class="footer-logo">
                               <a href="index.html">
-                                  <img src="assets/images/logo-two-white.png" alt="site-logo">
+                                  <img src="assets/images/logo/logo-utkallabs-white.png" alt="site-logo">
   
                               </a>
                           </div>
@@ -216,7 +235,7 @@ class SpecialFooter extends HTMLElement {
                                   <ul class="footer-list">
                                       <li><a href="gallery.html">Gallery</a></li>
                                       <li><a href="portfolio.html">Portfolio</a></li>
-                                      <li><a href="newsletter.html">Newsletter</a></li>
+                                      <li><a href="monthlyinsights.html">Monthly Insights</a></li>
                                       <li><a href="case-studies.html">Case Studies</a></li>
                                   </ul>
                               </div>
