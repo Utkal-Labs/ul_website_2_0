@@ -17,7 +17,7 @@ class SpecialHeader extends HTMLElement {
            <div class="container2 d-flex justify-content-between mt-2 mx-auto">
               <!--  logo -->
               <a href="../../index.html" class="logo mr-auto">
-                  <img src="../../assets/images/logo-utkallabs-christmas-newyear.gif" alt=""></a>
+                  <img src="../../assets/images/logo/logo-utkallabs.png" alt=""></a>
               <!--  nav start-->
               <nav class="nav-menu d-none d-lg-block">
                   <ul class="nav-list">
@@ -52,7 +52,7 @@ class SpecialHeader extends HTMLElement {
                               <li><a href="../../case-studies.html">Case Studies</a></li>
                               <li><a href="../../our-solutions.html">Our Solutions</a></li>
                               <li><a href="../../tech-byte.html">Tech Bytes</a></li>
-                              <li><a href="../../newsletter.html">Newsletter</a></li>
+                              <li><a href="../../monthlyinsights.html">Monthly Insights</a></li>
 
                           </ul>
                       </li>
@@ -83,19 +83,35 @@ class SpecialHeader extends HTMLElement {
         this.updateActiveNav();
     }
 
-    updateActiveNav() {
-        const navItems = this.querySelectorAll(".nav-item a");
-        let currentPath = window.location.pathname;
-        currentPath = currentPath.slice(1, currentPath.length);
+updateActiveNav() {
+  const currentPath = window.location.pathname;
+  const navLinks = this.querySelectorAll(".nav-list a");
 
-        navItems.forEach((item) => {
-            if (item.getAttribute("href") === currentPath) {
-                item.parentElement.classList.add("active");
-            } else {
-                item.parentElement.classList.remove("active");
-            }
-        });
+  navLinks.forEach(link => {
+    const href = link.getAttribute("href");
+
+    // Ignore empty, #, or dropdown toggles
+    if (!href || href === "#" || href === "") return;
+
+    const linkPath = new URL(href, window.location.origin).pathname;
+    const li = link.closest("li");
+
+    // Clear previous state
+    li.classList.remove("active");
+
+    // Exact match
+    if (currentPath === linkPath) {
+      li.classList.add("active");
+
+      // 🔥 Activate parent dropdown (Services / Industries / Publications)
+      const parentDropdown = li.closest(".drop-down");
+      if (parentDropdown) {
+        parentDropdown.classList.add("active");
+      }
     }
+  });
+}
+ 
 }
 
 class SpecialFooter extends HTMLElement {
@@ -125,7 +141,7 @@ class SpecialFooter extends HTMLElement {
                       <div class="footer-widget pr-5">
                           <div class="footer-logo">
                               <a href="../../index.html">
-                                  <img src="../../assets/images/logo-two-white.png" alt="site-logo">
+                                  <img src="../../assets/images/logo/logo-utkallabs-white.png" alt="site-logo">
   
                               </a>
                           </div>
@@ -170,8 +186,8 @@ class SpecialFooter extends HTMLElement {
                                   <ul class="footer-list">
                                       <li><a href="../../gallery.html">Gallery</a></li>
                                       <li><a href="../../portfolio.html">Portfolio</a></li>
-                                      <li><a href="../../newsletter.html">Newsletter</a></li>
-                                      <li><a href="../../case-studies.html">Case Studies</a></li>
+                                      <li><a href="../../monthlyinsights.html">Monthly Insights</a></li>
+                            <li><a href="../../case-studies.html">Case Studies</a></li>
                                   </ul>
                               </div>
                           </div>
