@@ -311,6 +311,11 @@
 .footer-section .container {
   z-index: 99;
 }
+.footer-clutch {
+  padding-bottom: 10px;
+  max-width: 250px;
+
+}
 
 /*--------------------------------------------------------------
       @@@@@@@@@@@@ Wave Left Top @@@@@@@@@@@@
