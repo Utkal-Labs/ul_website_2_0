@@ -202,7 +202,8 @@ class SpecialFooter extends HTMLElement {
                               </a>
                           </div>
                           <p>Delivering innovative software solutions with quality, reliability, and continuous growth.</p>
-                            <div class="footer-clutch">
+                            
+                          <div class="footer-clutch">
                             <div class="clutch-widget"
                                 data-url="https://widget.clutch.co"
                                 data-widget-type="14"
