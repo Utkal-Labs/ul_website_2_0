@@ -152,7 +152,7 @@ class SpecialFooter extends HTMLElement {
   
                               </a>
                           </div>
-                          <p>We are constantly evolving and committed to serve the best to our customers.
+                          <p>Delivering innovative software solutions with quality, reliability, and continuous growth.
                               Delivering
                               quality solutions has been a top priority
                               for us.</p>
