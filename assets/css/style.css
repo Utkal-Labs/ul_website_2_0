@@ -2320,7 +2320,7 @@ input::placeholder{
 
 .about-section .card {
   position: relative;
-  width: 400px;
+  width: 420px;
   background: radial-gradient(#111 50%, #000 100%);
   overflow: hidden;
   cursor: pointer;
@@ -5568,3 +5568,53 @@ border-radius: 50%;
 /*--------------------------------------------------------------
   /////////////  common modal and button  end  ///////////////
 --------------------------------------------------------------*/
+
+
+img#image-sprite-commitment{
+    background: url(../images/aboutus/core-value.png) no-repeat;
+    background-size: 1087px 449px;
+        background-position: -743px -239px;
+    width: 410px;
+    height: 480px;
+    animation: commitmentAnimation 1s steps(10) infinite;
+}
+
+img#image-sprite-quality{
+   background: url(../images/aboutus/core-value.png) no-repeat;
+    background-size: 1087px 449px;
+    background-position: 20px 20px;
+    width: 410px;
+    height: 480px;
+}
+
+img#image-sprite-accountability{
+    background: url(../images/aboutus/core-value.png) no-repeat;
+    background-size: 1087px 449px;
+    background-position: 20px -275px;
+    width: 410px;
+    height: 480px;
+}
+
+img#image-sprite-ingenuity{
+      background: url(../images/aboutus/core-value.png) no-repeat;
+    background-size: 1087px 449px;
+    background-position: -347px 24px;
+    width: 410px;
+    height: 480px;
+}
+
+img#image-sprite-collaborative{
+    background: url(../images/aboutus/core-value.png) no-repeat;
+    background-size: 1087px 449px;
+    background-position: -364px -275px;
+    width: 410px;
+    height: 480px;
+}
+
+img#image-sprite-conclusion{
+      background: url(../images/aboutus/core-value.png) no-repeat;
+    background-size: 1087px 449px;
+    background-position: -732px -42px;
+    width: 410px;
+    height: 480px;
+}
