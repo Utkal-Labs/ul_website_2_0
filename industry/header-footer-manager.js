@@ -9,6 +9,14 @@ class SpecialHeader extends HTMLElement {
             tawkScript.charset = 'UTF-8';
             tawkScript.setAttribute('crossorigin', '*');
             document.head.appendChild(tawkScript);
+
+            
+         // Add clutch-footer-js
+        const clutchScript = document.createElement("script");
+        clutchScript.src = "https://widget.clutch.co/static/js/widget.js";
+        clutchScript.async = true;
+        document.head.appendChild(clutchScript);
+        // end clutch-footer
         
             // Add the top header HTML content
     this.innerHTML = `
@@ -143,11 +151,22 @@ class SpecialFooter extends HTMLElement {
   
                               </a>
                           </div>
-                          <p>We are constantly evolving and committed to serve the best to our customers.
-                              Delivering
-                              quality solutions has been a top priority
-                              for us.</p>
-  
+                                              <p>Delivering innovative software solutions with quality, reliability, and continuous growth.</p>
+
+        <div class="footer-clutch">
+                            <div class="clutch-widget"
+                                data-url="https://widget.clutch.co"
+                                data-widget-type="14"
+                                data-height="50"
+                                data-nofollow="false"S
+                                data-expandifr="true"
+                                data-scale="90"
+                                data-clutchcompany-id="2050625">
+                            </div>
+                            </div>
+
+
+
                           <ul class="footer-social">
                               <li class="linkedin"><a href="https://www.linkedin.com/company/utkal-labs" target=”_blank”
                                       class="d-flex justify-content-center align-items-center">

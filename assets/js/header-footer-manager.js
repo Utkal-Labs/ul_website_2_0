@@ -1,17 +1,24 @@
 class SpecialTopHeader extends HTMLElement {
     connectedCallback() {
-      // Add the Tawk.to live chat script
-      const tawkScript = document.createElement("script");
-    //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
-    //   document.body.appendChild(script);
-      tawkScript.async = true;
-      tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
-      tawkScript.charset = 'UTF-8';
-      tawkScript.setAttribute('crossorigin', '*');
-      document.head.appendChild(tawkScript);
-  
-      // Add the top header HTML content
-      this.innerHTML = `
+        // Add the Tawk.to live chat script
+        const tawkScript = document.createElement("script");
+        //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
+        //   document.body.appendChild(script);
+        tawkScript.async = true;
+        tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
+        tawkScript.charset = 'UTF-8';
+        tawkScript.setAttribute('crossorigin', '*');
+        document.head.appendChild(tawkScript);
+
+        // Add clutch-footer-js
+        const clutchScript = document.createElement("script");
+        clutchScript.src = "https://widget.clutch.co/static/js/widget.js";
+        clutchScript.async = true;
+        document.head.appendChild(clutchScript);
+        // end clutch-footer
+
+        // Add the top header HTML content
+        this.innerHTML = `
         <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
           <div class="container2 d-flex align-items-center justify-content-between">
             <div class="upper-section">
@@ -60,11 +67,11 @@ class SpecialTopHeader extends HTMLElement {
         </div>
       `;
     }
-  }
+}
 
 class SpecialHeader extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
            <header id="header" class="fixed-top">
           <div class="container2 d-flex ">
               <!--  logo -->
@@ -129,43 +136,43 @@ class SpecialHeader extends HTMLElement {
           </div>
       </header>
           `;
-    this.updateActiveNav();
-  }
-
-updateActiveNav() {
-  const currentPath = window.location.pathname;
-  const navLinks = this.querySelectorAll(".nav-list a");
-
-  navLinks.forEach(link => {
-    const href = link.getAttribute("href");
-
-    // Ignore empty, #, or dropdown toggles
-    if (!href || href === "#" || href === "") return;
-
-    const linkPath = new URL(href, window.location.origin).pathname;
-    const li = link.closest("li");
-
-    // Clear previous state
-    li.classList.remove("active");
-
-    // Exact match
-    if (currentPath === linkPath) {
-      li.classList.add("active");
-
-      // 🔥 Activate parent dropdown (Services / Industries / Publications)
-      const parentDropdown = li.closest(".drop-down");
-      if (parentDropdown) {
-        parentDropdown.classList.add("active");
-      }
+        this.updateActiveNav();
     }
-  });
-}
- 
+
+    updateActiveNav() {
+        const currentPath = window.location.pathname;
+        const navLinks = this.querySelectorAll(".nav-list a");
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+
+            // Ignore empty, #, or dropdown toggles
+            if (!href || href === "#" || href === "") return;
+
+            const linkPath = new URL(href, window.location.origin).pathname;
+            const li = link.closest("li");
+
+            // Clear previous state
+            li.classList.remove("active");
+
+            // Exact match
+            if (currentPath === linkPath) {
+                li.classList.add("active");
+
+                // 🔥 Activate parent dropdown (Services / Industries / Publications)
+                const parentDropdown = li.closest(".drop-down");
+                if (parentDropdown) {
+                    parentDropdown.classList.add("active");
+                }
+            }
+        });
+    }
+
 }
 
 class SpecialFooter extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
           <footer class="footer-section pt-120">
   
               <div class="waves_left">
@@ -194,12 +201,21 @@ class SpecialFooter extends HTMLElement {
   
                               </a>
                           </div>
-                          <p>We are constantly evolving and committed to serve the best to our customers.
-                              Delivering
-                              quality solutions has been a top priority
-                              for us.</p>
-  
-                          <ul class="footer-social">
+                          <p>Delivering innovative software solutions with quality, reliability, and continuous growth.</p>
+                            
+                          <div class="footer-clutch">
+                            <div class="clutch-widget"
+                                data-url="https://widget.clutch.co"
+                                data-widget-type="14"
+                                data-height="50"
+                                data-nofollow="false"S
+                                data-expandifr="true"
+                                data-scale="90"
+                                data-clutchcompany-id="2050625">
+                            </div>
+                            </div>
+                                    
+                                                    <ul class="footer-social">
                               <li class="linkedin"><a href="https://www.linkedin.com/company/utkal-labs" target=”_blank”
                                       class="d-flex justify-content-center align-items-center"><i
                                           class="lab la-linkedin-in"></i></a>
@@ -226,6 +242,7 @@ class SpecialFooter extends HTMLElement {
                       </div>
                   </div>
   
+        
                   <div
                       class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 order-xl-3 order-lg-2 order-md-2 order-sm-2 order-xs-2">
                       <div class="row ps-xl-5 mt-md-0 mt-sm-5 mt-5">
@@ -300,7 +317,7 @@ class SpecialFooter extends HTMLElement {
   
       </footer>
           `;
-  }
+    }
 }
 
 customElements.define("special-top-header", SpecialTopHeader);
