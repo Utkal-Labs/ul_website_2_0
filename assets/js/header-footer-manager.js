@@ -1,17 +1,17 @@
 class SpecialTopHeader extends HTMLElement {
     connectedCallback() {
-      // Add the Tawk.to live chat script
-      const tawkScript = document.createElement("script");
-    //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
-    //   document.body.appendChild(script);
-      tawkScript.async = true;
-      tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
-      tawkScript.charset = 'UTF-8';
-      tawkScript.setAttribute('crossorigin', '*');
-      document.head.appendChild(tawkScript);
-  
-      // Add the top header HTML content
-      this.innerHTML = `
+        // Add the Tawk.to live chat script
+        const tawkScript = document.createElement("script");
+        //   script.src = "//code.tidio.co/mxyjcnentsyge1vrrztl3hixdvtd9bws.js";
+        //   document.body.appendChild(script);
+        tawkScript.async = true;
+        tawkScript.src = 'https://embed.tawk.to/65f420d78d261e1b5f6de6f5/1hp0q0jof';
+        tawkScript.charset = 'UTF-8';
+        tawkScript.setAttribute('crossorigin', '*');
+        document.head.appendChild(tawkScript);
+
+        // Add the top header HTML content
+        this.innerHTML = `
         <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
           <div class="container2 d-flex align-items-center justify-content-between">
             <div class="upper-section">
@@ -60,11 +60,11 @@ class SpecialTopHeader extends HTMLElement {
         </div>
       `;
     }
-  }
+}
 
 class SpecialHeader extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
            <header id="header" class="fixed-top">
           <div class="container2 d-flex ">
               <!--  logo -->
@@ -77,19 +77,17 @@ class SpecialHeader extends HTMLElement {
                          <li class="nav-item"><a href="../../index.html">Home</a></li>
                       <li class="nav-item"><a href="../../aboutus.html">About Us</a></li>
                       <li class="nav-item drop-down"><a href="">Services<i class="fas fa-angle-down ml-1 ms-1 pt-1"></i></a>
-                          <ul>
-                              <li><a href="../../service.html">All Services</a></li>
-                               <li><a href="../../services/service-alml-solution/service-alml-solution.html">Al/ML Solution</a></li>
-             
-                              <li><a href="../../service-qa-services.html">QA Services</a></li>
-                               <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
-                               <li><a href="../../service-devops-consulting.html">Devops Consulting</a></li>
-                                  <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
-                              <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
-                           
-                              <li><a href="../../service-web-mobile-application.html">Web & Mobile Application</a></li>
-                              <li><a href="../../service-robotic-process-automation.html">Robotic Process Automation</a>
+                 <ul>
+            <li><a href="../../service.html">All Services</a></li>
+             <li><a href="../../services/service-alml-solution/service-alml-solution.html">Al/ML Solution</a></li>
+             <li><a href="../../services/service-fintech-solution/index.html">Fintech Solution</a></li>
+             <li><a href="../../service-web-mobile-application.html">Web & Mobile Application</a></li>
+             <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
+             <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
+             <li><a href="../../service-robotic-process-automation.html">Robotic Process Automation</a>
                               </li>
+             <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
+             <li><a href="../../service-qa-services.html">QA Services</a></li>
                               
                           </ul>
                       </li>
@@ -129,43 +127,43 @@ class SpecialHeader extends HTMLElement {
           </div>
       </header>
           `;
-    this.updateActiveNav();
-  }
-
-updateActiveNav() {
-  const currentPath = window.location.pathname;
-  const navLinks = this.querySelectorAll(".nav-list a");
-
-  navLinks.forEach(link => {
-    const href = link.getAttribute("href");
-
-    // Ignore empty, #, or dropdown toggles
-    if (!href || href === "#" || href === "") return;
-
-    const linkPath = new URL(href, window.location.origin).pathname;
-    const li = link.closest("li");
-
-    // Clear previous state
-    li.classList.remove("active");
-
-    // Exact match
-    if (currentPath === linkPath) {
-      li.classList.add("active");
-
-      // 🔥 Activate parent dropdown (Services / Industries / Publications)
-      const parentDropdown = li.closest(".drop-down");
-      if (parentDropdown) {
-        parentDropdown.classList.add("active");
-      }
+        this.updateActiveNav();
     }
-  });
-}
- 
+
+    updateActiveNav() {
+        const currentPath = window.location.pathname;
+        const navLinks = this.querySelectorAll(".nav-list a");
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+
+            // Ignore empty, #, or dropdown toggles
+            if (!href || href === "#" || href === "") return;
+
+            const linkPath = new URL(href, window.location.origin).pathname;
+            const li = link.closest("li");
+
+            // Clear previous state
+            li.classList.remove("active");
+
+            // Exact match
+            if (currentPath === linkPath) {
+                li.classList.add("active");
+
+                // 🔥 Activate parent dropdown (Services / Industries / Publications)
+                const parentDropdown = li.closest(".drop-down");
+                if (parentDropdown) {
+                    parentDropdown.classList.add("active");
+                }
+            }
+        });
+    }
+
 }
 
 class SpecialFooter extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
           <footer class="footer-section pt-120">
   
               <div class="waves_left">
@@ -300,7 +298,7 @@ class SpecialFooter extends HTMLElement {
   
       </footer>
           `;
-  }
+    }
 }
 
 customElements.define("special-top-header", SpecialTopHeader);

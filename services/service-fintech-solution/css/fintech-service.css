@@ -1,0 +1,1590 @@
+
+/*/////////// service-fintech-solution ////////////// */
+
+.fintech-hero-section {
+background: url('../img/hero/fintech-hero-bg.png') center center / cover no-repeat ;
+  padding: 140px 0 90px;
+  color: #ffff;
+}
+
+.fintech-hero-content h4 {
+  font-size: 28px;
+  font-weight: 500;
+    color: #ffff;
+}
+
+.fintech-hero-content h1 {
+  font-size: 60px;
+  font-weight: 800;
+  margin-bottom: 20px;
+    color: #ffff;
+}
+
+.fintech-hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d7d7d7;
+}
+
+.fintech-hero-content ul {
+  padding-left: 20px;
+}
+
+.fintech-hero-content ul li {
+  margin-bottom: 10px;
+}
+
+.fintech-btn {
+    background: #ffb500;
+    border: 1px solid #ffb500;
+    color: #fff;
+     padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+    transition: .4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.fintech-btn:hover{
+    color:#fff;
+  background:#009798;
+  border-color:#009798;
+}
+
+/* soft glow layer */
+.fintech-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 60%);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+/* lift + glow */
+.fintech-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+}
+
+.fintech-hero-img {
+  max-width: 520px;
+}
+
+@media (max-width: 992px) {
+  .fintech-hero-section {
+    text-align: center;
+    padding: 120px 0 70px;
+  }
+
+  .fintech-hero-content h1 {
+    font-size: 48px;
+  }
+
+  .fintech-hero-img {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fintech-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .fintech-hero-content h4 {
+    font-size: 22px;
+  }
+
+  .fintech-btn {
+    width: 100%;
+  }
+}
+
+/*  <!-- Right Visual -->Optional floating effect */
+@media (min-width: 992px) {
+  .fintech-hero-rightimg{
+    animation: aimlFloat 6s ease-in-out infinite;
+  }
+}
+
+@keyframes aimlFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+  /* <!-- ======== hero-section end ======== --> */
+
+
+/*--------------------------------------------------------------
+# Features Details Section //fintech//
+--------------------------------------------------------------*/
+.features-details .features-item+.features-item {
+  margin-top: 60px;
+}
+
+
+.features-details .features-item h3 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.features-details .features-item p {
+  text-align: justify;
+}
+.features-about img{
+border-radius:5px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+transition:0.4s;
+
+}
+
+.features-about img:hover{
+transform:scale(1.02);
+}
+
+
+/* /*-----------------------------
+# Features Section  //fintech// 
+---------------------------------*/
+
+/* <!--//fintech// How Utkal Labs Helps--> */
+
+/* SECTION */
+.who-help-section {
+  background: #f6f7f9;
+}
+
+/* TITLE */
+.who-title {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 10px;
+}
+
+.who-subtitle {
+  color: #6c757d;
+  font-size: 15px;
+}
+
+/* CARD */
+.help-card {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  transition: all .25s ease;
+}
+
+.help-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* IMAGE SECTION */
+.card-img-box {
+  background: #f0f0f0;
+  padding: 15px;
+  text-align: center;
+
+}
+
+.card-img-box img {
+  max-height: 200px;
+  
+}
+
+/* CONTENT */
+.card-content {
+  background: #fff;
+  padding: 24px;
+}
+
+.card-content h5 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media (max-width: 768px) {
+
+  .who-title {
+    font-size: 28px;
+  }
+
+  .card-img-box {
+    padding: 25px;
+  }
+
+}
+
+/* <!--//fintech// How Utkal Labs Helps--> */
+
+/* <!--//fintech// benifits--> */
+/* SECTION */
+.fintech-benefits-section {
+     padding-top: 80px;
+  background: #f8f9fb;
+  overflow: hidden;
+}
+
+/* HEADING */
+.benefits-heading h2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.benefits-heading p {
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 80px;
+}
+
+/* MAIN WRAPPER */
+.benefits-wrapper {
+  position: relative;
+  min-height: 750px;
+}
+
+/* CENTER CIRCLE */
+.center-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 420px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+/* Rings */
+.outer-ring,
+.middle-ring,
+.inner-ring {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border: 3px solid #d7d7d7;
+  border-radius: 50%;
+  z-index: 0;
+  animation: rotateRing 90s linear infinite;
+}
+/* Rotate Animation */
+@keyframes rotateRing {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.outer-ring {
+  width: 420px;
+  height: 420px;
+  border: 3px solid #e2f5f5;
+}
+
+.middle-ring {
+  width: 560px;
+  height: 560px;
+  border: 1.5px dashed #d0edeb;
+}
+
+.inner-ring {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed #75d7d2;
+}
+
+/* Mobile Image */
+.center-circle img {
+  width: 180px;
+  position: relative;
+  z-index: 6;
+}
+
+/* Benefit Cards */
+.benefit-card {
+  position: absolute;
+    z-index: 5;
+  width: 320px;
+  background: white;
+  border-radius: 16px;
+  padding: 35px 28px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.06);
+  border: 1px solid #ececec;
+  transition: 0.35s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Typography */
+.benefit-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.benefit-card p {
+  font-size: 15px;
+  color: #6c757d;
+  line-height: 1.7;
+}
+
+/* Positions */
+.left.top {
+  left: 0;
+  top: 100px;
+}
+
+.right.top {
+  right: 0;
+  top: 100px;
+}
+
+.left.bottom {
+  left: 0;
+  bottom: 100px;
+}
+
+.right.bottom {
+  right: 0;
+  bottom: 100px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 991px) {
+
+  .benefits-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+
+  .center-circle {
+    position: relative;
+    transform: none;
+    left: auto;
+    top: auto;
+    margin-bottom: 50px;
+  }
+
+  .benefit-card {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 25px;
+  }
+
+  .left.top,
+  .right.top,
+  .left.bottom,
+  .right.bottom {
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .benefits-heading h2 {
+    font-size: 30px;
+  }
+
+  .center-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .outer-ring {
+    width: 280px;
+    height: 280px;
+  }
+
+  .middle-ring {
+    width: 360px;
+    height: 360px;
+  }
+
+  .inner-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .center-circle img {
+    width: 130px;
+  }
+
+}
+/* Floating Icons */
+.floating-icon {
+  position: absolute;
+  z-index: 7;
+  animation: floatMove 4s ease-in-out infinite;
+}
+
+.floating-icon img {
+  width: 70px;
+}
+
+/* Shield Position */
+.shield-icon {
+  top: 50px;
+  right: 70px;
+}
+
+/* Lock Position */
+.lock-icon {
+  bottom: 70px;
+  left: 70px;
+}
+
+/* Floating Animation */
+@keyframes floatMove {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Glow Dots */
+.glow-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #66d7d1;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(102,215,209,0.8);
+  z-index: 4;
+}
+
+/* Dot Positions */
+.dot1 {
+  top: 90px;
+  left: -8px;
+}
+
+.dot2 {
+  top: 90px;
+  right: -8px;
+}
+
+.dot3 {
+  bottom: 90px;
+  left: -8px;
+}
+
+.dot4 {
+  bottom: 90px;
+  right: -8px;
+}
+/* <!--//fintech// benifits--> */
+
+/* <!--//fintech// services-->  */
+/* SECTION */
+.fintech-services-section {
+padding-bottom: 80px;
+  background: #f7f9fb;
+}
+
+/* HEADING */
+.services-heading {
+  max-width: 850px;
+  margin-bottom: 60px;
+}
+
+.services-heading h2 {
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.services-heading p {
+  font-size: 16px;
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+/* CARD */
+.service-card {
+  transition: all .35s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.service-img {
+  overflow: hidden;
+  border-radius: 14px;
+  margin-bottom: 22px;
+}
+
+.service-img img {
+  width: 100%;
+  border-radius: 14px;
+  transition: 0.5s;
+}
+
+.service-card:hover .service-img img {
+  transform: scale(1.06);
+}
+
+/* TEXT */
+.service-card h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 17px;
+  color: #6c757d;
+  /* line-height: 1.8; */
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+
+  .services-heading h2 {
+    font-size: 38px;
+  }
+
+  .service-card h4 {
+    font-size: 24px;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .fintech-services-section {
+    padding: 70px 0;
+  }
+
+  .services-heading h2 {
+    font-size: 30px;
+  }
+
+  .services-heading p {
+    font-size: 15px;
+  }
+
+  .service-card h4 {
+    font-size: 22px;
+  }
+
+  .service-card p {
+    font-size: 15px;
+  }
+
+}
+
+/* <!--//fintech// services-->  */
+
+
+/* ═══════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f5f7f9;color:#0f172a;}
+ 
+/* ═══════════════════════════════════════════
+   SECTION WRAPPER
+═══════════════════════════════════════════ */
+.utk-fintech{
+  padding:80px 0 90px;
+  background:#f5f7f9;
+}
+.utk-container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 24px;
+}
+ 
+/* ═══════════════════════════════════════════
+   HEADING
+═══════════════════════════════════════════ */
+.utk-title{
+  font-size:clamp(28px,4vw,40px);
+  font-weight:800;
+  letter-spacing:-0.5px;
+  margin-bottom:10px;
+  color:#0f172a;
+}
+.utk-sub{
+  font-size:15px;
+  color:#64748b;
+  margin-bottom:32px;
+  max-width:680px;
+  line-height:1.7;
+}
+ 
+/* ═══════════════════════════════════════════
+   TABS
+═══════════════════════════════════════════ */
+.utk-tabs{
+  display:flex;
+  gap:12px;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+.utk-tab{
+  padding:13px 22px;
+  border:1.5px solid #e2e8f0;
+  border-radius:12px;
+  cursor:pointer;
+  background:#fff;
+  font-size:13.5px;
+  font-weight:500;
+  color:#475569;
+  transition:all 0.28s ease;
+  user-select:none;
+  position:relative;
+  box-shadow:0 1px 3px rgba(0,0,0,0.05);
+}
+.utk-tab::before{
+  content:'';
+  position:absolute;
+  inset:-1.5px;
+  border-radius:12px;
+  opacity:0;
+  background:linear-gradient(135deg,#14b8a6,#0ea5e9);
+  z-index:-1;
+  transition:opacity 0.28s ease;
+}
+.utk-tab.active{
+  border-color:#14b8a6;
+  color:#0f172a;
+  font-weight:600;
+  background:#f0fdfb;
+  box-shadow:0 0 0 3px rgba(20,184,166,0.15),0 4px 12px rgba(20,184,166,0.12);
+}
+.utk-tab:hover:not(.active){
+  border-color:#cbd5e1;
+  background:#f8fafc;
+}
+ 
+/* ═══════════════════════════════════════════
+   TAB PANELS — only active shown
+═══════════════════════════════════════════ */
+.utk-panel{display:none;}
+.utk-panel.active{display:block;}
+ 
+/* ═══════════════════════════════════════════
+   SLIDER CARD
+═══════════════════════════════════════════ */
+.utk-slider{
+  background:#fff;
+  border:1.5px solid #e5e7eb;
+  border-radius:18px;
+  padding:44px 44px 36px;
+  position:relative;
+  min-height:460px;
+  box-shadow:0 8px 32px rgba(0,0,0,0.07);
+  overflow:hidden;
+}
+ 
+/* ═══════════════════════════════════════════
+   DOTS — TOP RIGHT
+═══════════════════════════════════════════ */
+.utk-dots{
+  position:absolute;
+  top:22px;
+  right:28px;
+  display:flex;
+  gap:7px;
+  align-items:center;
+  z-index:10;
+}
+.utk-dot{
+  width:8px;height:8px;
+  border-radius:50%;
+  background:#d1d5db;
+  cursor:pointer;
+  transition:all 0.3s ease;
+  border:none;
+  padding:0;
+}
+.utk-dot.active{
+  width:26px;
+  border-radius:4px;
+  background:#14b8a6;
+}
+ 
+/* ═══════════════════════════════════════════
+   SLIDES — fade + translateY
+═══════════════════════════════════════════ */
+.utk-slide{
+  display:none;
+  animation:slideIn 0.45s ease forwards;
+}
+.utk-slide.active{display:block;}
+ 
+@keyframes slideIn{
+  from{opacity:0;transform:translateY(16px);}
+  to{opacity:1;transform:translateY(0);}
+}
+ 
+/* ═══════════════════════════════════════════
+   SLIDE 1 — HERO
+═══════════════════════════════════════════ */
+.utk-slide-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+  min-height:380px;
+}
+.utk-left h2{
+  font-size:clamp(26px,3.5vw,40px);
+  font-weight:800;
+  letter-spacing:-0.5px;
+  line-height:1.15;
+  margin-bottom:14px;
+  color:#0f172a;
+}
+.utk-left p{
+  font-size:14.5px;
+  color:#64748b;
+  line-height:1.75;
+  margin-bottom:24px;
+  max-width:420px;
+}
+.utk-stats{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.utk-stats div{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#f1f5f9;
+  border:1px solid #e2e8f0;
+  padding:10px 16px;
+  border-radius:10px;
+  font-size:13px;
+  font-weight:600;
+  color:#0f172a;
+}
+.utk-stats div i{
+  font-size:16px;
+  color:#14b8a6;
+}
+.utk-right{
+ 
+  height:420px; /* 🔥 FIXED HEIGHT */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* IMAGE STYLE */
+.utk-img{
+width:100%;
+  height:100%;
+  object-fit:contain; /* no crop */
+  transition:0.4s ease;
+}
+/* HOVER EFFECT */
+.utk-img:hover{
+  transform:translateY(-5px) scale(1.02);
+}
+/* 
+.utk-mockup{
+  width:100%;
+  background:#f8fafc;
+  border:1.5px solid #e5e7eb;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 16px 48px rgba(0,0,0,0.11);
+}
+.mock-bar{
+  background:#1e293b;
+  padding:9px 14px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.mock-bar .d{width:9px;height:9px;border-radius:50%;}
+.mock-bar .d.r{background:#ff5f57;}
+.mock-bar .d.y{background:#febc2e;}
+.mock-bar .d.g{background:#28c840;}
+.mock-url{flex:1;background:#334155;border-radius:4px;height:20px;margin-left:8px;display:flex;align-items:center;padding:0 10px;font-size:10.5px;color:#94a3b8;}
+.mock-body{display:grid;grid-template-columns:140px 1fr;}
+.mock-sidebar{background:#f1f5f9;border-right:1px solid #e5e7eb;padding:12px 10px;}
+.mock-sitem{padding:7px 10px;border-radius:7px;font-size:11px;color:#475569;display:flex;align-items:center;gap:7px;margin-bottom:3px;cursor:pointer;}
+.mock-sitem.active{background:#14b8a6;color:#fff;}
+.mock-main{padding:14px;}
+.mock-h{font-size:11.5px;font-weight:700;color:#0f172a;margin-bottom:2px;}
+.mock-sub{font-size:10px;color:#94a3b8;margin-bottom:10px;}
+.mock-table{width:100%;border-collapse:collapse;font-size:10px;}
+.mock-table th{color:#94a3b8;text-align:left;padding:4px 5px;border-bottom:1px solid #f1f5f9;font-weight:500;}
+.mock-table td{padding:6px 5px;border-bottom:1px solid #f8fafc;color:#475569;}
+.brisk{display:inline-block;padding:2px 7px;border-radius:100px;font-size:9px;font-weight:600;}
+.brisk.h{background:#fee2e2;color:#dc2626;}
+.brisk.m{background:#fef9c3;color:#ca8a04;}
+.verified{display:inline-flex;align-items:center;gap:5px;background:#d1fae5;color:#059669;border-radius:100px;padding:3px 10px;font-size:10px;font-weight:600;margin-top:8px;}
+  */
+/* ═══════════════════════════════════════════
+   SECTION TITLES (inside slides)
+═══════════════════════════════════════════ */
+.utk-section-title{
+  font-size:18px;
+  font-weight:700;
+  margin:28px 0 16px;
+  color:#0f172a;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.utk-section-title .snum{
+  width:26px;height:26px;
+  background:#ccfbf1;
+  color:#0d9488;
+  border-radius:7px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:700;
+  flex-shrink:0;
+}
+.utk-section-title:first-child{margin-top:0;}
+ 
+/* ═══════════════════════════════════════════
+   GRIDS
+═══════════════════════════════════════════ */
+.utk-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:8px;}
+.utk-grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.utk-grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:4px;}
+ 
+/* ═══════════════════════════════════════════
+   CARDS
+═══════════════════════════════════════════ */
+.utk-card{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  background:#fff;
+  border:1.5px solid #e6eaf0;
+  padding:18px;
+  border-radius:13px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+  transition:all 0.28s ease;
+}
+.utk-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 28px rgba(0,0,0,0.09);
+  border-color:#d0f4ef;
+}
+.utk-card.no-icon{align-items:flex-start;}
+.utk-card h5{font-size:14px;font-weight:700;margin-bottom:5px;color:#0f172a;}
+.utk-card p{font-size:12.5px;color:#64748b;line-height:1.65;}
+ 
+/* icons */
+.utk-icon{
+  width:40px;height:40px;
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;
+  flex-shrink:0;
+}
+.utk-icon.red{background:#fdecec;color:#e54848;}
+.utk-icon.orange{background:#fff4e5;color:#f59e0b;}
+.utk-icon.green{background:#e6f7f2;color:#00b894;}
+.utk-icon.blue{background:#eff6ff;color:#3b82f6;}
+ 
+/* ═══════════════════════════════════════════
+   DIVIDER
+═══════════════════════════════════════════ */
+.utk-divider{height:1px;background:#f1f5f9;margin:24px 0;}
+ 
+/* ═══════════════════════════════════════════
+   PILL (Tech Stack)
+═══════════════════════════════════════════ */
+.utk-pill{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px;
+  background:#f8fafc;
+  border:1.5px solid #e6eaf0;
+  border-radius:12px;
+  transition:all 0.28s ease;
+}
+.utk-pill:hover{border-color:#14b8a6;background:#f0fdfb;transform:translateY(-2px);}
+.utk-pill i{font-size:22px;color:#14b8a6;flex-shrink:0;}
+.utk-pill span{display:block;font-size:10.5px;color:#94a3b8;margin-bottom:2px;text-transform:uppercase;letter-spacing:0.04em;}
+.utk-pill strong{display:block;font-size:12.5px;font-weight:600;color:#0f172a;}
+ 
+/* ═══════════════════════════════════════════
+   SLIDE 3 TWO-COLUMN LAYOUT
+═══════════════════════════════════════════ */
+.utk-s3-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:4px;}
+.utk-s3-box{
+  background:#f8fafc;
+  border:1.5px solid #e5e7eb;
+  border-radius:13px;
+  padding:20px;
+}
+.utk-s3-box .utk-section-title{margin-top:0;}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.feat-card{
+  background:#fff;border:1.5px solid #e5e7eb;
+  border-radius:10px;padding:14px;
+  transition:all 0.28s ease;
+}
+.feat-card:hover{border-color:#14b8a6;box-shadow:0 4px 12px rgba(20,184,166,0.1);}
+.feat-card h6{font-size:11px;font-weight:700;color:#0d9488;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:5px;}
+.feat-card p{font-size:11.5px;color:#64748b;line-height:1.6;}
+.arch-list{display:flex;flex-direction:column;gap:10px;}
+.arch-item{
+  display:flex;gap:12px;align-items:flex-start;
+  background:#fff;border:1.5px solid #e5e7eb;
+  border-radius:10px;padding:12px 14px;
+  transition:all 0.28s ease;
+}
+.arch-item:hover{border-color:#14b8a6;}
+.arch-item i{font-size:18px;color:#14b8a6;flex-shrink:0;margin-top:1px;}
+.arch-item h6{font-size:12px;font-weight:700;color:#0f172a;margin-bottom:3px;}
+.arch-item p{font-size:11px;color:#64748b;line-height:1.55;}
+ 
+/* ═══════════════════════════════════════════
+   TECH SECTION WRAPPER (slide 3 bottom)
+═══════════════════════════════════════════ */
+.utk-tech-wrap{
+  background:#f8fafc;
+  border:1.5px solid #e5e7eb;
+  border-radius:13px;
+  padding:20px;
+  margin-top:20px;
+}
+.utk-tech-title{font-size:15px;font-weight:700;color:#0f172a;margin-bottom:14px;}
+ 
+/* ═══════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════ */
+@media(max-width:960px){
+  .utk-slide-inner{grid-template-columns:1fr;}
+  .utk-right{display:none;}
+  .utk-grid3{grid-template-columns:1fr 1fr;}
+  .utk-grid4{grid-template-columns:1fr 1fr;}
+  .utk-s3-wrap{grid-template-columns:1fr;}
+  .utk-grid5{grid-template-columns:repeat(3,1fr);}
+}
+@media(max-width:600px){
+  .utk-slider{padding:28px 18px 24px;}
+  .utk-grid3{grid-template-columns:1fr;}
+  .utk-grid4{grid-template-columns:1fr;}
+  .feat-grid{grid-template-columns:1fr;}
+  .utk-grid5{grid-template-columns:1fr 1fr;}
+  .utk-tabs{flex-direction:column;}
+  .utk-tab{text-align:center;}
+}
+
+
+
+
+
+
+
+
+
+/* <!--//fintech// project-cta-section-->  */
+/* SECTION */
+.project-cta-section {
+     padding-bottom: 80px;
+  background: #f7f9fb;
+}
+
+/* BANNER */
+.project-banner {
+  position: relative;
+  background: url('../img/project-bg.png') center center / cover no-repeat ;
+  border-radius: 18px;
+  /* min-height: 420px; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+}
+
+/* Overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+   background: linear-gradient(90deg, rgb(0 0 0) 0%, rgb(0 33 22) 35%, #021e11 100%);  
+   opacity: 90%;
+}
+
+/* Content */
+.project-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* Heading */
+.project-content h2 {
+  font-size: 52px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.project-content p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.8;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.project-btn {
+  display: inline-block;
+  background: #00b7c6;
+  color: white;
+  padding: 18px 42px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.35s ease;
+}
+
+.project-btn:hover {
+  background: #009cab;
+  transform: translateY(-3px);
+  color: white;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 992px) {
+
+  .project-banner {
+    min-height: 350px;
+    padding: 50px;
+  }
+
+  .project-content h2 {
+    font-size: 46px;
+  }
+
+  .project-content p {
+    font-size: 18px;
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .project-banner {
+    min-height: 300px;
+    padding: 35px 25px;
+  }
+
+  .project-content h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .project-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .project-btn {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+
+}
+
+/* <!--//fintech// project-cta-section-->  */
+
+/* <!--//fintech// usecase-section-->  */
+.finuse-section{
+  padding:80px 0;
+  background:
+  radial-gradient(circle at top right, rgba(0,255,255,0.08), transparent 30%),
+  radial-gradient(circle at bottom left, rgba(0,255,255,0.05), transparent 25%),
+  #02070d;
+  overflow:hidden;
+}
+
+.finuse-title{
+  color:#fff;
+  font-size:42px;
+  font-weight:700;
+}
+
+.finuse-subtitle{
+  color:#d7d7d7;
+  margin-bottom:40px;
+}
+
+.finuse-main-card{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+  padding:18px;
+  margin-bottom:35px;
+}
+
+.finuse-main-image{
+  overflow:hidden;
+  border-radius:14px;
+}
+
+.finuse-main-image img{
+  width:100%;
+  transition:transform .6s ease;
+}
+
+.finuse-main-card:hover img{
+  transform:scale(1.05);
+}
+
+.finuse-content{
+  padding:20px;
+  animation:fadeUp .5s ease;
+}
+
+.finuse-content h2{
+  font-size:40px;
+  font-weight:700;
+}
+
+.finuse-content p{
+  color:#555;
+  line-height:1.8;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(12px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+.finuse-slider{
+  overflow:hidden;
+  position:relative;
+}
+
+.finuse-track{
+  display:flex;
+  gap:18px;
+  width:max-content;
+  animation:finuseMarquee 30s linear infinite;
+}
+
+.finuse-slider:hover .finuse-track{
+  animation-play-state:paused;
+}
+
+@keyframes finuseMarquee{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+.finuse-card{
+  min-width:180px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(0,255,255,.18);
+  backdrop-filter:blur(12px);
+  border-radius:14px;
+  padding:18px 22px;
+  color:#fff;
+  cursor:pointer;
+  transition:.35s;
+  text-align:center;
+
+  font-size:18px;
+}
+
+.finuse-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 0 20px rgba(0,255,255,.18);
+}
+
+.finuse-card.active{
+  border:1px solid #00d9ff;
+  box-shadow:0 0 20px rgba(0,255,255,.35);
+}
+
+@media(max-width:768px){
+  .finuse-main-card .row{
+    flex-direction:column;
+  }
+
+  .finuse-content h2{
+    font-size:30px;
+  }
+
+  .finuse-card{
+    min-width:150px;
+  }
+}
+/* <!--//fintech// usecase-section-end-->  */
+
+/* <!--//fintech// Tech Stack-->  */
+
+.tech-stack-section{
+  padding:80px 0;
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.tech-heading {
+    padding-bottom: 42px;
+}
+
+.tech-heading h2{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.tech-heading p{
+  font-size:17px;
+  color:#666;
+  max-width:700px;
+  margin:auto auto 50px;
+}
+
+.logo-marquee{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:25px;
+}
+
+.logo-track{
+  display:flex;
+  width:max-content;
+  gap:18px;
+}
+
+.marquee-left .logo-track{
+  animation: scrollLeft 58s linear infinite;
+}
+
+.marquee-right .logo-track{
+  animation: scrollRight 58s linear infinite;
+}
+
+.logo-pill{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:220px;
+  padding:14px 22px;
+  border:1px solid #e6e6e6;
+  border-radius:50px;
+  background:#fff;
+  flex-shrink:0;
+  transition:.3s ease;
+}
+
+.logo-pill img{
+  width:24px;
+  height:24px;
+  object-fit:contain;
+}
+
+.logo-pill span{
+  font-size:14px;
+  font-weight:600;
+  color:#111;
+  white-space:nowrap;
+}
+
+.logo-pill:hover{
+  /* transform:translateY(-1px); */
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  border-color:#00bcd4;
+}
+
+/* smooth infinite */
+@keyframes scrollLeft{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+@keyframes scrollRight{
+  from{
+    transform:translateX(-50%);
+  }
+  to{
+    transform:translateX(0);
+  }
+}
+
+/* blur edges */
+.logo-marquee::before,
+.logo-marquee::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:120px;
+  height:100%;
+  z-index:2;
+}
+
+.logo-marquee::before{
+  left:0;
+  background:linear-gradient(to right,#fff,transparent);
+}
+
+.logo-marquee::after{
+  right:0;
+  background:linear-gradient(to left,#fff,transparent);
+}
+
+/* responsive */
+@media(max-width:768px){
+
+  .tech-heading h2{
+    font-size:30px;
+  }
+
+  .logo-pill{
+    min-width:180px;
+    padding:12px 18px;
+  }
+
+  .logo-pill span{
+    font-size:13px;
+  }
+
+  .logo-pill img{
+    width:20px;
+    height:20px;
+  }
+}
+/* <!--//fintech// Tech Stack-end-->  */ 
+
+ /* <!-- //fintech// FAQ section//// --> */
+.faq-section{
+  padding-bottom:80px;
+  background:#fff;
+}
+
+.faq-title h2{
+  font-size:48px;
+  font-weight:700;
+  color:#111;
+  margin-bottom:40px;
+}
+
+.faq-wrapper{
+  max-width:1200px;
+  margin:auto;
+}
+
+.faq-item{
+  border-bottom:1px solid #dcdcdc;
+  padding:28px 0;
+}
+
+.faq-question{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:none;
+  border:none;
+  font-size:24px;
+  font-weight:600;
+  color:#111;
+  cursor:pointer;
+  padding:0;
+  text-align:left;
+}
+
+.faq-icon{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#000;
+  position:relative;
+  transition:all .35s ease;
+  flex-shrink:0;
+}
+
+.faq-icon::before,
+.faq-icon::after{
+  content:"";
+  position:absolute;
+  background:#fff;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  transition:all .35s ease;
+}
+
+.faq-icon::before{
+  width:14px;
+  height:2px;
+}
+
+.faq-icon::after{
+  width:2px;
+  height:14px;
+}
+
+.faq-item.active .faq-icon{
+  background:#009798;
+  transform:rotate(180deg);
+}
+
+.faq-item.active .faq-icon::after{
+  opacity:0;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  opacity:0;
+  transform:translateY(-10px);
+  transition:
+    max-height .55s cubic-bezier(0.4,0,0.2,1),
+    opacity .45s ease,
+    transform .45s ease;
+}
+
+.faq-item.active .faq-answer{
+  max-height:220px;
+  opacity:1;
+  transform:translateY(0);
+  margin-top:22px;
+}
+
+.faq-answer p{
+  font-size:18px;
+  color:#444;
+  line-height:1.8;
+  max-width:950px;
+}
+
+@media(max-width:768px){
+
+  .faq-title h2{
+    font-size:34px;
+  }
+
+  .faq-question{
+    font-size:22px;
+    gap:15px;
+  }
+
+  .faq-answer p{
+    font-size:16px;
+  }
+
+  .faq-icon{
+    width:30px;
+    height:30px;
+  }
+}
+
+/* <!-- //fintech// FAQ-section-end//// --> */
+
+
+/* <!-- //fintech// other-services-section // --> */
+.other-services {
+  background-color: #f5f8fb;
+  padding: 80px 0;;
+}
+
+.other-services-all {
+  line-height: 4rem;
+  margin-top: 5px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.other-services-all :hover {
+  color: #009798;
+}
+
+.get-in-touch form h4 {
+  color: white;
+}
+
+.get-in-touch {
+  background: #000000;
+  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  color: white;
+}
+
+.service-form-group {
+  padding: 12px 20px;
+  width: 300px;
+  height: 50px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.Request-a-quotes {
+  width: 300px;
+  height: 50px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #009798;
+  border: 1px solid #009798;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #ffff;
+}
+
+.get-in-touch-input-field {
+  width: 300px;
+  height: 50px;
+  border-radius: 6px;
+}
+
+/* <!-- //fintech// other-services-section-end // --> */
