@@ -493,7 +493,7 @@ height: 100%;
 
 
 /*---------------------------------------
-    FAQs  ///////            
+   <!-- FAQ section//// -->        
   -----------------------------------------*/
 .faq-section .accordion-item {
   border: 0;
@@ -521,7 +521,7 @@ height: 100%;
 }
 
 /*---------------------------------------
-   Services other             
+   other-services-section //aiml           
   -----------------------------------------*/
 .other-services {
   background-color: #f5f8fb;

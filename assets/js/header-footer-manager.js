@@ -10,13 +10,6 @@ class SpecialTopHeader extends HTMLElement {
         tawkScript.setAttribute('crossorigin', '*');
         document.head.appendChild(tawkScript);
 
-        // Add clutch-footer-js
-        const clutchScript = document.createElement("script");
-        clutchScript.src = "https://widget.clutch.co/static/js/widget.js";
-        clutchScript.async = true;
-        document.head.appendChild(clutchScript);
-        // end clutch-footer
-
         // Add the top header HTML content
         this.innerHTML = `
         <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
@@ -84,19 +77,17 @@ class SpecialHeader extends HTMLElement {
                          <li class="nav-item"><a href="../../index.html">Home</a></li>
                       <li class="nav-item"><a href="../../aboutus.html">About Us</a></li>
                       <li class="nav-item drop-down"><a href="">Services<i class="fas fa-angle-down ml-1 ms-1 pt-1"></i></a>
-                          <ul>
-                              <li><a href="../../service.html">All Services</a></li>
-                               <li><a href="../../services/service-alml-solution/service-alml-solution.html">Al/ML Solution</a></li>
-             
-                              <li><a href="../../service-qa-services.html">QA Services</a></li>
-                               <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
-                               <li><a href="../../service-devops-consulting.html">Devops Consulting</a></li>
-                                  <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
-                              <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
-                           
-                              <li><a href="../../service-web-mobile-application.html">Web & Mobile Application</a></li>
-                              <li><a href="../../service-robotic-process-automation.html">Robotic Process Automation</a>
+                 <ul>
+            <li><a href="../../service.html">All Services</a></li>
+             <li><a href="../../services/service-alml-solution/service-alml-solution.html">Al/ML Solution</a></li>
+             <li><a href="../../services/service-fintech-solution/index.html">Fintech Solution</a></li>
+             <li><a href="../../service-web-mobile-application.html">Web & Mobile Application</a></li>
+             <li><a href="../../service-enterprise-solution.html">Enterprise Solution</a></li>
+             <li><a href="../../service-digital-transformation.html">Digital Transformation</a></li>
+             <li><a href="../../service-robotic-process-automation.html">Robotic Process Automation</a>
                               </li>
+             <li><a href="../../service-blockchain-nft.html">Blockchain & NFT</a></li>
+             <li><a href="../../service-qa-services.html">QA Services</a></li>
                               
                           </ul>
                       </li>
