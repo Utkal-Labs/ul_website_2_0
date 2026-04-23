@@ -1519,6 +1519,149 @@ textarea::placeholder {
  /////// 6.[Have A Project In Mind? Let's Connect /// end ////indexpage
 -------------------------------------------------------------------*/
 
+ /* <!--// Our Valued Clients//index--> */
+.tech-stack-section{
+  padding:80px 0;
+  background:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.tech-heading {
+    padding-bottom: 42px;
+}
+
+.tech-heading h2{
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:15px;
+  color:#111;
+}
+
+.tech-heading p{
+  font-size:17px;
+  color:#666;
+  max-width:700px;
+  margin:auto auto 50px;
+}
+
+.logo-marquee{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:25px;
+}
+
+.logo-track{
+  display:flex;
+  width:max-content;
+  gap:18px;
+}
+
+.marquee-left .logo-track{
+  animation: scrollLeft 58s linear infinite;
+}
+
+.marquee-right .logo-track{
+  animation: scrollRight 58s linear infinite;
+}
+
+.logo-pill{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:14px 22px;
+  border:1px solid #e6e6e6;
+  border-radius:10px;
+  background:#fff;
+  flex-shrink:0;
+  transition:.3s ease;
+}
+
+.logo-pill img{
+  /* width:24px;
+  height:24px; */
+  object-fit:contain;
+}
+
+/* .logo-pill span{
+  font-size:14px;
+  font-weight:600;
+  color:#111;
+  white-space:nowrap;
+} */
+
+.logo-pill:hover{
+  /* transform:translateY(-1px); */
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+  border-color:#00bcd4;
+}
+
+/* smooth infinite */
+@keyframes scrollLeft{
+  from{
+    transform:translateX(0);
+  }
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* @keyframes scrollRight{
+  from{
+    transform:translateX(-50%);
+  }
+  to{
+    transform:translateX(0);
+  }
+} */
+
+/* blur edges */
+.logo-marquee::before,
+.logo-marquee::after{
+  content:"";
+  position:absolute;
+  top:0;
+  width:120px;
+  height:100%;
+  z-index:2;
+}
+
+.logo-marquee::before{
+  left:0;
+  background:linear-gradient(to right,#fff,transparent);
+}
+
+.logo-marquee::after{
+  right:0;
+  background:linear-gradient(to left,#fff,transparent);
+}
+
+/* responsive */
+@media(max-width:768px){
+
+  .tech-heading h2{
+    font-size:30px;
+  }
+
+  .logo-pill{
+    min-width:180px;
+    padding:12px 18px;
+  }
+
+  /* .logo-pill span{
+    font-size:13px;
+  } */
+
+  /* .logo-pill img{
+    width:20px;
+    height:20px;
+  } */
+}
+
+
+
+
+/* <!--// Our Valued Clients//index-end--> */
+
 /*--------------------------------------------------------------
  @@@@@@ 6.start client feedback-testimonials-section  //indexpage  @@@@@
 --------------------------------------------------------------*/
@@ -2227,7 +2370,7 @@ textarea::placeholder {
 
 
 /* <!--====================
-6. End testimonials-section // What Our Clients Say 
+6. End testimonials-section // What Our Clients Say//index
 ====================--> */
 .subscribe-section {
   position: relative;
