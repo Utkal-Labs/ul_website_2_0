@@ -26,9 +26,9 @@ class SpecialTopHeader extends HTMLElement {
                 </div>
   
                 <div class="topnavbar-call2">
-                  <a href="tel:+91 93383 08255">
+                  <a href="tel:+91 67431 57623">
                     <img src="assets/images/icon/india.png" alt="INDIA Flag" width="18" height="18">
-                    <span>+91 93383 08255</span>
+                    <span>+91 67431 57623</span>
                   </a>
                 </div>
   
