@@ -540,8 +540,8 @@ a:hover {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #3fbbc0;
-  border-top-color: #ecf8f9;
+  border: 6px solid #4361EE;
+  border-top-color: #fff;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1054,7 +1054,7 @@ label {
 }
 
 ::selection {
-  background-color: #009798;
+  background-color: #4361EE;
   color: #fff;
 }
 

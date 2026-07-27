@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node build.js)",
+      "Bash(node -e ' *)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

@@ -283,7 +283,7 @@ class SpecialFooter extends HTMLElement {
                               
                               <!-- the filter to make the image white -->
                               <filter id="filter">
-                                  <feFlood flood-color="white" />
+                                  <feFlood flood-color="#4361EE" />
                                   <feComposite in2="SourceAlpha" operator="in" />
                               </filter>
                           </svg>

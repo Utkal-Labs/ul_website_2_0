@@ -178,9 +178,8 @@ for (i = 0; i < acc.length; i++) {
   });
   // Preloader End
 
-  $("select").niceSelect(),
-    // aos
-    AOS.init();
+  if (typeof $.fn.niceSelect === "function") { $("select").niceSelect(); }
+  AOS.init();
 
   $(".video").lightcase();
 
@@ -387,6 +386,7 @@ const testimonialSwiper = new Swiper(".testimonials-slider", {
   speed:900,
   autoplay:{ delay:4000, disableOnInteraction:false },
   pagination:{ el:".testimonials-pagination", clickable:true },
+  navigation:{ nextEl:".testimonials-next", prevEl:".testimonials-prev" },
   breakpoints:{ 991:{ slidesPerView:2 } }
 });
 
@@ -405,7 +405,8 @@ document.querySelectorAll(".video-testimonial-btn").forEach(btn=>{
     modal.style.display="flex";
     video.src = btn.dataset.video;
     video.currentTime = 0;
-    video.play();
+    video.load();
+    video.play().catch(function(){});
   });
 });
 // Close button
