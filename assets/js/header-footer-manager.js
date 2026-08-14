@@ -314,3 +314,12 @@ class SpecialFooter extends HTMLElement {
 customElements.define("special-top-header", SpecialTopHeader);
 customElements.define("special-header", SpecialHeader);
 customElements.define("special-footer", SpecialFooter);
+
+// Loads the (date-gated, no-op outside its window) Independence Day tricolor
+// effect on every page, since this file is already included site-wide.
+(function () {
+    var s = document.createElement("script");
+    s.src = "assets/js/independence-day.js";
+    s.defer = true;
+    document.head.appendChild(s);
+})();
